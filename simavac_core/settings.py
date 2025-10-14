@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'backend.enfermera_app',
     'backend.doctor_app',
     'backend.tutor_app',
+    'backend.auth_app'
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -100,18 +101,20 @@ DATABASES = {
 # ──────────────────────────────────────────────────────────────────────────────
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-    # Por defecto todo protegido: usa @permission_classes([AllowAny]) en vistas públicas
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        # Desactiva autenticación JWT global para vistas públicas
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ),
 }
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
-    'AUTH_HEADER_TYPES': ('Bearer',),
+
+SIMPLE_JWT = {    
+    "USER_ID_FIELD": "curp",
+    "USER_ID_CLAIM": "curp",
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
