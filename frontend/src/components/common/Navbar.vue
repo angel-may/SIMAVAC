@@ -1,52 +1,82 @@
 <template>
-  <header class="navbar">
-    <div class="left">
-      <strong>SIMAVAC</strong>
-      <nav class="links" v-if="rol">
-        <RouterLink v-if="rol === 'admin'" to="/admin">Panel admin</RouterLink>
-        <RouterLink v-if="rol === 'enfermera'" to="/enfermera">Panel enfermera</RouterLink>
-      </nav>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="logo">SIMAVAC</h1>
     </div>
 
-    <div class="right" v-if="user">
-      <span class="user">
-        {{ user.username }} <small>({{ rol }})</small>
+    <div class="navbar-right">
+      <span class="user-info">
+        👤 {{ userName }} <small>({{ userRole }})</small>
       </span>
-      <button class="logout" @click="onLogout">Cerrar sesión</button>
+      <button class="logout-btn" @click="logout">Cerrar sesión</button>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useRouter, RouterLink } from 'vue-router'
-import { useUserStore } from '../../stores/user'
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
-const store = useUserStore()
-const router = useRouter()
+const userName = ref("Usuario");
+const userRole = ref("Rol");
+const router = useRouter();
 
-const user = computed(() => store.user)
-const rol  = computed(() => store.rol)
+onMounted(() => {
+  const userData = JSON.parse(localStorage.getItem("user"));
+  if (userData) {
+    userName.value = userData.nombre || "Usuario";
+    userRole.value = userData.rol || "Rol";
+  }
+});
 
-const onLogout = () => {
-  store.logout()
-  router.push({ name: 'login' })
-}
+const logout = () => {
+  localStorage.removeItem("user");
+  localStorage.removeItem("access");
+  localStorage.removeItem("refresh");
+  router.push("/");
+};
 </script>
 
 <style scoped>
 .navbar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 16px; background: #0f172a; color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001f4d;
+  color: white;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
-.left { display: flex; align-items: center; gap: 18px; }
-.links a { color: #93c5fd; margin-right: 12px; text-decoration: none; }
-.links a.router-link-active { text-decoration: underline; }
-.right { display: flex; align-items: center; gap: 12px; }
-.user small { color: #cbd5e1; }
-.logout {
-  background: #ef4444; color: white; border: none; padding: 6px 10px;
-  border-radius: 6px; cursor: pointer;
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
 }
-.logout:hover { background: #dc2626; }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff6b81;
+}
 </style>

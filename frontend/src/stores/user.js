@@ -1,47 +1,60 @@
-import { defineStore } from 'pinia'
-import api from '../utils/api'
+// 📁 frontend/src/stores/user.js
+import { defineStore } from "pinia";
+import { AuthService } from "@/utils/auth.service";
 
-export const useUserStore = defineStore('user', {
+export const useUserStore = defineStore("user", {
   state: () => ({
-    access: localStorage.getItem('access') || null,
-    refresh: localStorage.getItem('refresh') || null,
-    user: JSON.parse(localStorage.getItem('user') || 'null'),
+    user: null,         // Datos del usuario actual
+    access: null,       // Token (si se usa JWT más adelante)
+    isAuth: false,      // Estado de autenticación
   }),
+
   getters: {
-    isAuth: (s) => !!s.access && !!s.user,
-    rol: (s) => s.user?.rol || null,
+    nombre: (state) => state.user?.nombre || "",
+    rol: (state) => state.user?.rol || "",
+    correo: (state) => state.user?.correo || "",
   },
+
   actions: {
-    setSession({ access, refresh, user }) {
-      this.access = access
-      this.refresh = refresh
-      this.user = user
-      localStorage.setItem('access', access)
-      localStorage.setItem('refresh', refresh)
-      localStorage.setItem('user', JSON.stringify(user))
+    // 🔹 Iniciar sesión
+    async login(user, password) {
+      try {
+        const data = await AuthService.login(user, password);
+        this.user = data;
+        this.isAuth = true;
+
+        // Si más adelante manejas JWT, puedes guardar el token aquí
+        if (data.access) this.access = data.access;
+
+        // Guardar en localStorage para mantener sesión
+        localStorage.setItem("user", JSON.stringify(data));
+
+        return data;
+      } catch (err) {
+        this.logout();
+        throw err;
+      }
     },
-    setAccess(access) {
-      this.access = access
-      localStorage.setItem('access', access)
-    },
-    logout() {
-      this.access = null
-      this.refresh = null
-      this.user = null
-      localStorage.removeItem('access')
-      localStorage.removeItem('refresh')
-      localStorage.removeItem('user')
-    },
-    async login(username, password) {
-      const { data } = await api.post('/core/auth/login/', { username, password })
-      this.setSession(data) // data: { access, refresh, user }
-      return data.user
-    },
+
+    // 🔹 Obtener usuario actual (para auto-login)
     async fetchMe() {
-      const { data } = await api.get('/core/auth/me/')
-      this.user = data.user
-      localStorage.setItem('user', JSON.stringify(this.user))
-      return this.user
+      // Si hay datos previos en localStorage
+      const localData = localStorage.getItem("user");
+      if (localData) {
+        this.user = JSON.parse(localData);
+        this.isAuth = true;
+        return this.user;
+      } else {
+        this.logout();
+      }
+    },
+
+    // 🔹 Cerrar sesión
+    logout() {
+      this.user = null;
+      this.access = null;
+      this.isAuth = false;
+      localStorage.removeItem("user");
     },
   },
-})
+});
