@@ -73,7 +73,8 @@ const login = async () => {
     let destino = "/";
 
     if (rol === "administrador") destino = "/admin";
-    else if (rol === "doctor") destino = "/enfermera";
+    else if (rol === "doctor") destino = "/doctor";
+    else if (rol === "enfermera") destino = "/enfermera";
     else if (rol === "tutor") destino = "/tutor";
 
     console.log("➡️ Redirigiendo a:", destino);
