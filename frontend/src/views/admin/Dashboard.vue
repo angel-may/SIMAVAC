@@ -1,20 +1,37 @@
 <template>
   <BaseLayout title="SIMAVAC - Administrador">
-    <!-- Slot del menú lateral -->
+    <!-- ======= MENÚ LATERAL ======= -->
     <template #menu>
       <router-link to="/admin" exact-active-class="active">🏠 Inicio</router-link>
       <router-link to="/admin/usuarios" exact-active-class="active">👥 Usuarios</router-link>
-      <router-link to="/admin/vacunas/ver" exact-active-class="active">💉 Vacunas</router-link>
+
+      <!-- 🔹 Nuevo módulo de Biológicos -->
+      <router-link to="/admin/biologicos" exact-active-class="active">
+        🧬 Biológicos
+      </router-link>
+
+      <!-- Puedes dejar el de vacunas por ahora si deseas acceso temporal -->
+      <!-- <router-link to="/admin/vacunas/ver" exact-active-class="active">💉 Vacunas</router-link> -->
+
       <router-link to="/admin/campanias/ver" exact-active-class="active">📅 Campañas</router-link>
       <router-link to="/admin/reportes/vacunas" exact-active-class="active">📊 Reportes</router-link>
       <router-link to="/admin/configuracion" exact-active-class="active">⚙️ Configuración</router-link>
     </template>
+
+    <!-- ======= CONTENIDO PRINCIPAL ======= -->
+    <div class="main-content">
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
   </BaseLayout>
 </template>
+
 <script setup>
 import { useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
 import BaseLayout from "@/layouts/BaseLayout.vue";
+
 const router = useRouter();
 const user = ref(JSON.parse(localStorage.getItem("user") || "{}"));
 

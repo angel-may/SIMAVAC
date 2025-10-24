@@ -1,60 +1,75 @@
 // 📁 frontend/src/stores/user.js
-import { defineStore } from "pinia";
-import { AuthService } from "@/utils/auth.service";
+// Gestión centralizada del usuario y sus tokens con Pinia
+
+import { defineStore } from "pinia"
 
 export const useUserStore = defineStore("user", {
   state: () => ({
-    user: null,         // Datos del usuario actual
-    access: null,       // Token (si se usa JWT más adelante)
-    isAuth: false,      // Estado de autenticación
+    access: null,
+    refresh: null,
+    user: null, // objeto con username, nombre, rol, etc.
   }),
 
-  getters: {
-    nombre: (state) => state.user?.nombre || "",
-    rol: (state) => state.user?.rol || "",
-    correo: (state) => state.user?.correo || "",
-  },
-
   actions: {
-    // 🔹 Iniciar sesión
-    async login(user, password) {
-      try {
-        const data = await AuthService.login(user, password);
-        this.user = data;
-        this.isAuth = true;
+    // =====================================================
+    // 🔹 Inicializar desde localStorage (auto-login)
+    // =====================================================
+    initFromStorage() {
+      const access = localStorage.getItem("access")
+      const refresh = localStorage.getItem("refresh")
+      const user = localStorage.getItem("user")
 
-        // Si más adelante manejas JWT, puedes guardar el token aquí
-        if (data.access) this.access = data.access;
-
-        // Guardar en localStorage para mantener sesión
-        localStorage.setItem("user", JSON.stringify(data));
-
-        return data;
-      } catch (err) {
-        this.logout();
-        throw err;
-      }
-    },
-
-    // 🔹 Obtener usuario actual (para auto-login)
-    async fetchMe() {
-      // Si hay datos previos en localStorage
-      const localData = localStorage.getItem("user");
-      if (localData) {
-        this.user = JSON.parse(localData);
-        this.isAuth = true;
-        return this.user;
+      if (access && refresh) {
+        this.access = access
+        this.refresh = refresh
+        this.user = user ? JSON.parse(user) : null
+        console.log("🔄 Sesión restaurada desde localStorage:", this.user?.username)
       } else {
-        this.logout();
+        console.warn("⚠️ No se encontró sesión guardada en localStorage.")
       }
     },
 
-    // 🔹 Cerrar sesión
+    // =====================================================
+    // 🔹 Guardar sesión (al iniciar login)
+    // =====================================================
+    setSession(data) {
+      this.access = data.access
+      this.refresh = data.refresh
+      this.user = {
+        username: data.username,
+        nombre: data.nombre,
+        correo: data.correo,
+        rol: data.rol,
+        curp: data.curp,
+      }
+
+      localStorage.setItem("access", data.access)
+      localStorage.setItem("refresh", data.refresh)
+      localStorage.setItem("user", JSON.stringify(this.user))
+
+      console.log("✅ Sesión guardada correctamente en store y localStorage.")
+    },
+
+    // =====================================================
+    // 🔹 Actualizar access token (después de refresh)
+    // =====================================================
+    setAccess(newAccess) {
+      this.access = newAccess
+      localStorage.setItem("access", newAccess)
+      console.log("♻️ Access token actualizado en store y localStorage.")
+    },
+
+    // =====================================================
+    // 🔹 Cerrar sesión y limpiar datos
+    // =====================================================
     logout() {
-      this.user = null;
-      this.access = null;
-      this.isAuth = false;
-      localStorage.removeItem("user");
+      this.access = null
+      this.refresh = null
+      this.user = null
+      localStorage.removeItem("access")
+      localStorage.removeItem("refresh")
+      localStorage.removeItem("user")
+      console.log("🚪 Sesión cerrada y datos limpiados.")
     },
   },
-});
+})

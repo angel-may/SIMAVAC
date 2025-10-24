@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict Tr21h2wQmWD89LHtazNxGhAV7pMKR5uVNBX3O9JLLpgtFWgvOBUkgg61U1v0tOd
+\restrict Ya0LcVusSFuRMu5JYu0o4IYTW9oTmwRbouRc0Y6PgkXMBWFv8qVSXwfG7XRquvc
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
 
--- Started on 2025-10-10 14:33:14
+-- Started on 2025-10-16 22:01:00
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -60,7 +60,7 @@ CREATE SEQUENCE public.alerta_idalerta_seq
 ALTER SEQUENCE public.alerta_idalerta_seq OWNER TO postgres;
 
 --
--- TOC entry 5346 (class 0 OID 0)
+-- TOC entry 5351 (class 0 OID 0)
 -- Dependencies: 264
 -- Name: alerta_idalerta_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -286,7 +286,7 @@ CREATE SEQUENCE public.biologico_idvacuna_seq
 ALTER SEQUENCE public.biologico_idvacuna_seq OWNER TO postgres;
 
 --
--- TOC entry 5347 (class 0 OID 0)
+-- TOC entry 5352 (class 0 OID 0)
 -- Dependencies: 236
 -- Name: biologico_idvacuna_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -329,7 +329,7 @@ CREATE SEQUENCE public.campaniavacunacion_idcampania_seq
 ALTER SEQUENCE public.campaniavacunacion_idcampania_seq OWNER TO postgres;
 
 --
--- TOC entry 5348 (class 0 OID 0)
+-- TOC entry 5353 (class 0 OID 0)
 -- Dependencies: 245
 -- Name: campaniavacunacion_idcampania_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -383,7 +383,7 @@ CREATE SEQUENCE public.censonominal_idcenso_seq
 ALTER SEQUENCE public.censonominal_idcenso_seq OWNER TO postgres;
 
 --
--- TOC entry 5349 (class 0 OID 0)
+-- TOC entry 5354 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: censonominal_idcenso_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -423,7 +423,7 @@ CREATE SEQUENCE public.colonia_idcol_seq
 ALTER SEQUENCE public.colonia_idcol_seq OWNER TO postgres;
 
 --
--- TOC entry 5350 (class 0 OID 0)
+-- TOC entry 5355 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: colonia_idcol_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -463,7 +463,7 @@ CREATE SEQUENCE public.detallepedido_iddetalle_seq
 ALTER SEQUENCE public.detallepedido_iddetalle_seq OWNER TO postgres;
 
 --
--- TOC entry 5351 (class 0 OID 0)
+-- TOC entry 5356 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: detallepedido_iddetalle_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -505,7 +505,7 @@ CREATE SEQUENCE public.direccion_iddireccion_seq
 ALTER SEQUENCE public.direccion_iddireccion_seq OWNER TO postgres;
 
 --
--- TOC entry 5352 (class 0 OID 0)
+-- TOC entry 5357 (class 0 OID 0)
 -- Dependencies: 227
 -- Name: direccion_iddireccion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -657,7 +657,7 @@ CREATE SEQUENCE public.enfermedad_idenferm_seq
 ALTER SEQUENCE public.enfermedad_idenferm_seq OWNER TO postgres;
 
 --
--- TOC entry 5353 (class 0 OID 0)
+-- TOC entry 5358 (class 0 OID 0)
 -- Dependencies: 251
 -- Name: enfermedad_idenferm_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -713,7 +713,7 @@ CREATE SEQUENCE public.esquemavacunacion_idesquema_seq
 ALTER SEQUENCE public.esquemavacunacion_idesquema_seq OWNER TO postgres;
 
 --
--- TOC entry 5354 (class 0 OID 0)
+-- TOC entry 5359 (class 0 OID 0)
 -- Dependencies: 234
 -- Name: esquemavacunacion_idesquema_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -753,7 +753,7 @@ CREATE SEQUENCE public.estado_idestado_seq
 ALTER SEQUENCE public.estado_idestado_seq OWNER TO postgres;
 
 --
--- TOC entry 5355 (class 0 OID 0)
+-- TOC entry 5360 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: estado_idestado_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -810,7 +810,7 @@ CREATE SEQUENCE public.inventariobiologicos_idinventario_seq
 ALTER SEQUENCE public.inventariobiologicos_idinventario_seq OWNER TO postgres;
 
 --
--- TOC entry 5356 (class 0 OID 0)
+-- TOC entry 5361 (class 0 OID 0)
 -- Dependencies: 254
 -- Name: inventariobiologicos_idinventario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -851,7 +851,7 @@ CREATE SEQUENCE public.jurisdiccionsanitaria_idjurisdiccion_seq
 ALTER SEQUENCE public.jurisdiccionsanitaria_idjurisdiccion_seq OWNER TO postgres;
 
 --
--- TOC entry 5357 (class 0 OID 0)
+-- TOC entry 5362 (class 0 OID 0)
 -- Dependencies: 238
 -- Name: jurisdiccionsanitaria_idjurisdiccion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -890,7 +890,7 @@ CREATE SEQUENCE public.municipio_idmuni_seq
 ALTER SEQUENCE public.municipio_idmuni_seq OWNER TO postgres;
 
 --
--- TOC entry 5358 (class 0 OID 0)
+-- TOC entry 5363 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: municipio_idmuni_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -967,7 +967,7 @@ CREATE SEQUENCE public.notificacion_idnotificacion_seq
 ALTER SEQUENCE public.notificacion_idnotificacion_seq OWNER TO postgres;
 
 --
--- TOC entry 5359 (class 0 OID 0)
+-- TOC entry 5364 (class 0 OID 0)
 -- Dependencies: 266
 -- Name: notificacion_idnotificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1005,7 +1005,7 @@ CREATE SEQUENCE public.pais_idpais_seq
 ALTER SEQUENCE public.pais_idpais_seq OWNER TO postgres;
 
 --
--- TOC entry 5360 (class 0 OID 0)
+-- TOC entry 5365 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: pais_idpais_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1048,7 +1048,7 @@ CREATE SEQUENCE public.pedidobiologicos_idpedido_seq
 ALTER SEQUENCE public.pedidobiologicos_idpedido_seq OWNER TO postgres;
 
 --
--- TOC entry 5361 (class 0 OID 0)
+-- TOC entry 5366 (class 0 OID 0)
 -- Dependencies: 256
 -- Name: pedidobiologicos_idpedido_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1074,7 +1074,7 @@ CREATE TABLE public.persona (
     fnac date,
     tsangre character varying(5),
     direc integer,
-    rol integer NOT NULL,
+    rol integer DEFAULT 1 NOT NULL,
     CONSTRAINT persona_sexo_check CHECK ((sexo = ANY (ARRAY['H'::bpchar, 'M'::bpchar])))
 );
 
@@ -1115,7 +1115,7 @@ CREATE SEQUENCE public.puntovacunacion_idpunto_seq
 ALTER SEQUENCE public.puntovacunacion_idpunto_seq OWNER TO postgres;
 
 --
--- TOC entry 5362 (class 0 OID 0)
+-- TOC entry 5367 (class 0 OID 0)
 -- Dependencies: 247
 -- Name: puntovacunacion_idpunto_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1165,7 +1165,7 @@ CREATE SEQUENCE public.registrovacunacion_idregistro_seq
 ALTER SEQUENCE public.registrovacunacion_idregistro_seq OWNER TO postgres;
 
 --
--- TOC entry 5363 (class 0 OID 0)
+-- TOC entry 5368 (class 0 OID 0)
 -- Dependencies: 249
 -- Name: registrovacunacion_idregistro_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1209,7 +1209,7 @@ CREATE SEQUENCE public.reporte_idreporte_seq
 ALTER SEQUENCE public.reporte_idreporte_seq OWNER TO postgres;
 
 --
--- TOC entry 5364 (class 0 OID 0)
+-- TOC entry 5369 (class 0 OID 0)
 -- Dependencies: 268
 -- Name: reporte_idreporte_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1219,7 +1219,7 @@ ALTER SEQUENCE public.reporte_idreporte_seq OWNED BY public.reporte.idreporte;
 
 --
 -- TOC entry 263 (class 1259 OID 17329)
--- Name: retirobiologico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: retirogico; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.retirobiologico (
@@ -1234,7 +1234,7 @@ CREATE TABLE public.retirobiologico (
     folio character varying(20),
     observaciones text
 );
-
+biolo
 
 ALTER TABLE public.retirobiologico OWNER TO postgres;
 
@@ -1255,7 +1255,7 @@ CREATE SEQUENCE public.retirobiologico_idretiro_seq
 ALTER SEQUENCE public.retirobiologico_idretiro_seq OWNER TO postgres;
 
 --
--- TOC entry 5365 (class 0 OID 0)
+-- TOC entry 5370 (class 0 OID 0)
 -- Dependencies: 262
 -- Name: retirobiologico_idretiro_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1297,7 +1297,7 @@ CREATE SEQUENCE public.rol_idrol_seq
 ALTER SEQUENCE public.rol_idrol_seq OWNER TO postgres;
 
 --
--- TOC entry 5366 (class 0 OID 0)
+-- TOC entry 5371 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: rol_idrol_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1339,7 +1339,7 @@ CREATE SEQUENCE public.unidaddesalud_idunidad_seq
 ALTER SEQUENCE public.unidaddesalud_idunidad_seq OWNER TO postgres;
 
 --
--- TOC entry 5367 (class 0 OID 0)
+-- TOC entry 5372 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: unidaddesalud_idunidad_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1356,11 +1356,38 @@ CREATE TABLE public.usuario (
     curp character varying(18) NOT NULL,
     rfc character varying(13) NOT NULL,
     username character varying(50) NOT NULL,
-    password character varying(255) NOT NULL
+    password character varying(255) NOT NULL,
+    rol integer,
+    idusuario integer NOT NULL
 );
 
 
 ALTER TABLE public.usuario OWNER TO postgres;
+
+--
+-- TOC entry 289 (class 1259 OID 17565)
+-- Name: usuario_idusuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.usuario_idusuario_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.usuario_idusuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 5373 (class 0 OID 0)
+-- Dependencies: 289
+-- Name: usuario_idusuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.usuario_idusuario_seq OWNED BY public.usuario.idusuario;
+
 
 --
 -- TOC entry 261 (class 1259 OID 17309)
@@ -1398,7 +1425,7 @@ CREATE SEQUENCE public.validacionpedido_idvalidacion_seq
 ALTER SEQUENCE public.validacionpedido_idvalidacion_seq OWNER TO postgres;
 
 --
--- TOC entry 5368 (class 0 OID 0)
+-- TOC entry 5374 (class 0 OID 0)
 -- Dependencies: 260
 -- Name: validacionpedido_idvalidacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1407,7 +1434,7 @@ ALTER SEQUENCE public.validacionpedido_idvalidacion_seq OWNED BY public.validaci
 
 
 --
--- TOC entry 4950 (class 2604 OID 17356)
+-- TOC entry 4953 (class 2604 OID 17356)
 -- Name: alerta idalerta; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1415,7 +1442,7 @@ ALTER TABLE ONLY public.alerta ALTER COLUMN idalerta SET DEFAULT nextval('public
 
 
 --
--- TOC entry 4937 (class 2604 OID 17106)
+-- TOC entry 4940 (class 2604 OID 17106)
 -- Name: biologico idvacuna; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1423,7 +1450,7 @@ ALTER TABLE ONLY public.biologico ALTER COLUMN idvacuna SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 4941 (class 2604 OID 17172)
+-- TOC entry 4944 (class 2604 OID 17172)
 -- Name: campaniavacunacion idcampania; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1431,7 +1458,7 @@ ALTER TABLE ONLY public.campaniavacunacion ALTER COLUMN idcampania SET DEFAULT n
 
 
 --
--- TOC entry 4940 (class 2604 OID 17143)
+-- TOC entry 4943 (class 2604 OID 17143)
 -- Name: censonominal idcenso; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1439,7 +1466,7 @@ ALTER TABLE ONLY public.censonominal ALTER COLUMN idcenso SET DEFAULT nextval('p
 
 
 --
--- TOC entry 4933 (class 2604 OID 17003)
+-- TOC entry 4934 (class 2604 OID 17003)
 -- Name: colonia idcol; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1447,7 +1474,7 @@ ALTER TABLE ONLY public.colonia ALTER COLUMN idcol SET DEFAULT nextval('public.c
 
 
 --
--- TOC entry 4947 (class 2604 OID 17295)
+-- TOC entry 4950 (class 2604 OID 17295)
 -- Name: detallepedido iddetalle; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1455,7 +1482,7 @@ ALTER TABLE ONLY public.detallepedido ALTER COLUMN iddetalle SET DEFAULT nextval
 
 
 --
--- TOC entry 4934 (class 2604 OID 17015)
+-- TOC entry 4935 (class 2604 OID 17015)
 -- Name: direccion iddireccion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1463,7 +1490,7 @@ ALTER TABLE ONLY public.direccion ALTER COLUMN iddireccion SET DEFAULT nextval('
 
 
 --
--- TOC entry 4944 (class 2604 OID 17236)
+-- TOC entry 4947 (class 2604 OID 17236)
 -- Name: enfermedad idenferm; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1471,7 +1498,7 @@ ALTER TABLE ONLY public.enfermedad ALTER COLUMN idenferm SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 4936 (class 2604 OID 17097)
+-- TOC entry 4939 (class 2604 OID 17097)
 -- Name: esquemavacunacion idesquema; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1479,7 +1506,7 @@ ALTER TABLE ONLY public.esquemavacunacion ALTER COLUMN idesquema SET DEFAULT nex
 
 
 --
--- TOC entry 4931 (class 2604 OID 16979)
+-- TOC entry 4932 (class 2604 OID 16979)
 -- Name: estado idestado; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1487,7 +1514,7 @@ ALTER TABLE ONLY public.estado ALTER COLUMN idestado SET DEFAULT nextval('public
 
 
 --
--- TOC entry 4945 (class 2604 OID 17260)
+-- TOC entry 4948 (class 2604 OID 17260)
 -- Name: inventariobiologicos idinventario; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1495,7 +1522,7 @@ ALTER TABLE ONLY public.inventariobiologicos ALTER COLUMN idinventario SET DEFAU
 
 
 --
--- TOC entry 4938 (class 2604 OID 17120)
+-- TOC entry 4941 (class 2604 OID 17120)
 -- Name: jurisdiccionsanitaria idjurisdiccion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1503,7 +1530,7 @@ ALTER TABLE ONLY public.jurisdiccionsanitaria ALTER COLUMN idjurisdiccion SET DE
 
 
 --
--- TOC entry 4932 (class 2604 OID 16991)
+-- TOC entry 4933 (class 2604 OID 16991)
 -- Name: municipio idmuni; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1511,7 +1538,7 @@ ALTER TABLE ONLY public.municipio ALTER COLUMN idmuni SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 4951 (class 2604 OID 17370)
+-- TOC entry 4954 (class 2604 OID 17370)
 -- Name: notificacion idnotificacion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1519,7 +1546,7 @@ ALTER TABLE ONLY public.notificacion ALTER COLUMN idnotificacion SET DEFAULT nex
 
 
 --
--- TOC entry 4930 (class 2604 OID 16972)
+-- TOC entry 4931 (class 2604 OID 16972)
 -- Name: pais idpais; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1527,7 +1554,7 @@ ALTER TABLE ONLY public.pais ALTER COLUMN idpais SET DEFAULT nextval('public.pai
 
 
 --
--- TOC entry 4946 (class 2604 OID 17277)
+-- TOC entry 4949 (class 2604 OID 17277)
 -- Name: pedidobiologicos idpedido; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1535,7 +1562,7 @@ ALTER TABLE ONLY public.pedidobiologicos ALTER COLUMN idpedido SET DEFAULT nextv
 
 
 --
--- TOC entry 4942 (class 2604 OID 17182)
+-- TOC entry 4945 (class 2604 OID 17182)
 -- Name: puntovacunacion idpunto; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1543,7 +1570,7 @@ ALTER TABLE ONLY public.puntovacunacion ALTER COLUMN idpunto SET DEFAULT nextval
 
 
 --
--- TOC entry 4943 (class 2604 OID 17196)
+-- TOC entry 4946 (class 2604 OID 17196)
 -- Name: registrovacunacion idregistro; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1551,7 +1578,7 @@ ALTER TABLE ONLY public.registrovacunacion ALTER COLUMN idregistro SET DEFAULT n
 
 
 --
--- TOC entry 4952 (class 2604 OID 17391)
+-- TOC entry 4955 (class 2604 OID 17391)
 -- Name: reporte idreporte; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1559,7 +1586,7 @@ ALTER TABLE ONLY public.reporte ALTER COLUMN idreporte SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 4949 (class 2604 OID 17332)
+-- TOC entry 4952 (class 2604 OID 17332)
 -- Name: retirobiologico idretiro; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1567,7 +1594,7 @@ ALTER TABLE ONLY public.retirobiologico ALTER COLUMN idretiro SET DEFAULT nextva
 
 
 --
--- TOC entry 4929 (class 2604 OID 16962)
+-- TOC entry 4930 (class 2604 OID 16962)
 -- Name: rol idrol; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1575,7 +1602,7 @@ ALTER TABLE ONLY public.rol ALTER COLUMN idrol SET DEFAULT nextval('public.rol_i
 
 
 --
--- TOC entry 4939 (class 2604 OID 17129)
+-- TOC entry 4942 (class 2604 OID 17129)
 -- Name: unidaddesalud idunidad; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1583,7 +1610,15 @@ ALTER TABLE ONLY public.unidaddesalud ALTER COLUMN idunidad SET DEFAULT nextval(
 
 
 --
--- TOC entry 4948 (class 2604 OID 17312)
+-- TOC entry 4937 (class 2604 OID 17566)
+-- Name: usuario idusuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.usuario ALTER COLUMN idusuario SET DEFAULT nextval('public.usuario_idusuario_seq'::regclass);
+
+
+--
+-- TOC entry 4951 (class 2604 OID 17312)
 -- Name: validacionpedido idvalidacion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -1591,7 +1626,7 @@ ALTER TABLE ONLY public.validacionpedido ALTER COLUMN idvalidacion SET DEFAULT n
 
 
 --
--- TOC entry 5317 (class 0 OID 17353)
+-- TOC entry 5321 (class 0 OID 17353)
 -- Dependencies: 265
 -- Data for Name: alerta; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1601,17 +1636,21 @@ COPY public.alerta (idalerta, nino_curp, nino_rfc, tipo, descripcion, fechagener
 
 
 --
--- TOC entry 5329 (class 0 OID 17427)
+-- TOC entry 5333 (class 0 OID 17427)
 -- Dependencies: 277
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.auth_group (id, name) FROM stdin;
+1	admin
+2	enfermera
+3	doctor
+4	tutor
 \.
 
 
 --
--- TOC entry 5331 (class 0 OID 17435)
+-- TOC entry 5335 (class 0 OID 17435)
 -- Dependencies: 279
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1621,7 +1660,7 @@ COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 5327 (class 0 OID 17421)
+-- TOC entry 5331 (class 0 OID 17421)
 -- Dependencies: 275
 -- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1651,32 +1690,57 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 22	Can change session	6	change_session
 23	Can delete session	6	delete_session
 24	Can view session	6	view_session
+25	Can add direccion	7	add_direccion
+26	Can change direccion	7	change_direccion
+27	Can delete direccion	7	delete_direccion
+28	Can view direccion	7	view_direccion
+29	Can add persona	8	add_persona
+30	Can change persona	8	change_persona
+31	Can delete persona	8	delete_persona
+32	Can view persona	8	view_persona
+33	Can add rol	9	add_rol
+34	Can change rol	9	change_rol
+35	Can delete rol	9	delete_rol
+36	Can view rol	9	view_rol
+37	Can add usuario	10	add_usuario
+38	Can change usuario	10	change_usuario
+39	Can delete usuario	10	delete_usuario
+40	Can view usuario	10	view_usuario
 \.
 
 
 --
--- TOC entry 5333 (class 0 OID 17441)
+-- TOC entry 5337 (class 0 OID 17441)
 -- Dependencies: 281
 -- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
 1	pbkdf2_sha256$1000000$BRKOiEIAQiUJbJo4MVMAVi$KivbObW1o/bUk/faaA/yRMuqvZ4OdUkbFtDd+h681V0=	2025-10-10 14:03:46.928815-06	t	may			may10@gmail.com	t	t	2025-10-10 14:03:22.17458-06
+2	pbkdf2_sha256$1000000$yuXtkEkg4AYR7p5Pawmker$2cs428O3aI5/rCFFmtNeDwiHDRlhxV4XYudqEgQrwU0=	\N	f	admin1			admin1@example.com	t	t	2025-10-10 20:39:25.167633-06
+3	pbkdf2_sha256$1000000$5YlfxyOgGAF8zaYzLwGVLQ$QPZXoC8S7uI3w1IRmbIEpIe7hf9FmSlj+ztPrOZkMI8=	\N	f	enf1			enf1@example.com	f	t	2025-10-10 20:39:25.631005-06
+4	pbkdf2_sha256$1000000$YtjkxPlAsrUHaQeoK1e1p3$LKjaG0jJxQPUYwfpzLrPC0Yf4u0tjz+eHGjf6o8X2bI=	\N	f	doc1			doc1@example.com	f	t	2025-10-10 20:39:25.992667-06
+5	pbkdf2_sha256$1000000$zFcLMIayIZwHOiapPQtGxJ$l87kfnE1gQRWQg/AFPJgYIwuYZPwm/syFeP49FczHEM=	\N	f	tutor1			tutor1@example.com	f	t	2025-10-10 20:39:26.357469-06
+6	pbkdf2_sha256$1000000$LwtQCxPI1tSxyX4csEc4mF$3NTLMBD9ppjNvAXsIpbVSikpPMdQucMTziQW2FwIyW8=	\N	t	root			root@example.com	t	t	2025-10-10 20:39:26.724897-06
 \.
 
 
 --
--- TOC entry 5335 (class 0 OID 17449)
+-- TOC entry 5339 (class 0 OID 17449)
 -- Dependencies: 283
 -- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+1	2	1
+2	3	2
+3	4	3
+4	5	4
 \.
 
 
 --
--- TOC entry 5337 (class 0 OID 17455)
+-- TOC entry 5341 (class 0 OID 17455)
 -- Dependencies: 285
 -- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1686,7 +1750,7 @@ COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 5289 (class 0 OID 17103)
+-- TOC entry 5293 (class 0 OID 17103)
 -- Dependencies: 237
 -- Data for Name: biologico; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1696,7 +1760,7 @@ COPY public.biologico (idvacuna, nombre, dosisrequeridas, intervalodias, edadmin
 
 
 --
--- TOC entry 5298 (class 0 OID 17169)
+-- TOC entry 5302 (class 0 OID 17169)
 -- Dependencies: 246
 -- Data for Name: campaniavacunacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1706,7 +1770,7 @@ COPY public.campaniavacunacion (idcampania, nombre, fechainicio, fechafin, objet
 
 
 --
--- TOC entry 5296 (class 0 OID 17153)
+-- TOC entry 5300 (class 0 OID 17153)
 -- Dependencies: 244
 -- Data for Name: censonino; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1716,7 +1780,7 @@ COPY public.censonino (idcenso, nino_curp, nino_rfc) FROM stdin;
 
 
 --
--- TOC entry 5295 (class 0 OID 17140)
+-- TOC entry 5299 (class 0 OID 17140)
 -- Dependencies: 243
 -- Data for Name: censonominal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1726,7 +1790,7 @@ COPY public.censonominal (idcenso, idunidad, fechaactualizacion, descripcion) FR
 
 
 --
--- TOC entry 5278 (class 0 OID 17000)
+-- TOC entry 5282 (class 0 OID 17000)
 -- Dependencies: 226
 -- Data for Name: colonia; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1736,7 +1800,7 @@ COPY public.colonia (idcol, idmuni, nombre, cp) FROM stdin;
 
 
 --
--- TOC entry 5311 (class 0 OID 17292)
+-- TOC entry 5315 (class 0 OID 17292)
 -- Dependencies: 259
 -- Data for Name: detallepedido; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1746,7 +1810,7 @@ COPY public.detallepedido (iddetalle, idpedido, idvacuna, cantidadsolicitada) FR
 
 
 --
--- TOC entry 5280 (class 0 OID 17012)
+-- TOC entry 5284 (class 0 OID 17012)
 -- Dependencies: 228
 -- Data for Name: direccion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1756,7 +1820,7 @@ COPY public.direccion (iddireccion, idcol, calle, numex, numin, ref) FROM stdin;
 
 
 --
--- TOC entry 5339 (class 0 OID 17513)
+-- TOC entry 5343 (class 0 OID 17513)
 -- Dependencies: 287
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1766,7 +1830,7 @@ COPY public.django_admin_log (id, action_time, object_id, object_repr, action_fl
 
 
 --
--- TOC entry 5325 (class 0 OID 17413)
+-- TOC entry 5329 (class 0 OID 17413)
 -- Dependencies: 273
 -- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1778,11 +1842,15 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 4	auth	user
 5	contenttypes	contenttype
 6	sessions	session
+7	auth_app	direccion
+8	auth_app	persona
+9	auth_app	rol
+10	auth_app	usuario
 \.
 
 
 --
--- TOC entry 5323 (class 0 OID 17405)
+-- TOC entry 5327 (class 0 OID 17405)
 -- Dependencies: 271
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1806,11 +1874,13 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 16	auth	0011_update_proxy_permissions	2025-10-08 23:10:55.072258-06
 17	auth	0012_alter_user_first_name_max_length	2025-10-08 23:10:55.077238-06
 18	sessions	0001_initial	2025-10-08 23:10:55.086603-06
+19	auth_app	0001_initial	2025-10-11 18:21:49.696457-06
+20	auth_app	0002_add_rol_to_persona	2025-10-11 19:29:05.507689-06
 \.
 
 
 --
--- TOC entry 5340 (class 0 OID 17541)
+-- TOC entry 5344 (class 0 OID 17541)
 -- Dependencies: 288
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1821,7 +1891,7 @@ dyici8cwixjy2tfqa2zbkax2jppjyugb	.eJxVjEEOwiAQRe_C2hDawgAu3XsGwjCDVA0kpV0Z765Nut
 
 
 --
--- TOC entry 5304 (class 0 OID 17233)
+-- TOC entry 5308 (class 0 OID 17233)
 -- Dependencies: 252
 -- Data for Name: enfermedad; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1831,7 +1901,7 @@ COPY public.enfermedad (idenferm, nombre, cientifico, tipo_agente, grupo, transm
 
 
 --
--- TOC entry 5283 (class 0 OID 17055)
+-- TOC entry 5287 (class 0 OID 17055)
 -- Dependencies: 231
 -- Data for Name: enlacevacunacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1841,7 +1911,7 @@ COPY public.enlacevacunacion (curp, rfc, foliocredencial, activo) FROM stdin;
 
 
 --
--- TOC entry 5287 (class 0 OID 17094)
+-- TOC entry 5291 (class 0 OID 17094)
 -- Dependencies: 235
 -- Data for Name: esquemavacunacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1851,7 +1921,7 @@ COPY public.esquemavacunacion (idesquema, nombre, descripcion, edadminmeses, eda
 
 
 --
--- TOC entry 5274 (class 0 OID 16976)
+-- TOC entry 5278 (class 0 OID 16976)
 -- Dependencies: 222
 -- Data for Name: estado; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1861,7 +1931,7 @@ COPY public.estado (idestado, idpais, nombre, abreviatura) FROM stdin;
 
 
 --
--- TOC entry 5284 (class 0 OID 17068)
+-- TOC entry 5288 (class 0 OID 17068)
 -- Dependencies: 232
 -- Data for Name: funcionariojurisdiccion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1871,7 +1941,7 @@ COPY public.funcionariojurisdiccion (curp, rfc, puesto) FROM stdin;
 
 
 --
--- TOC entry 5307 (class 0 OID 17257)
+-- TOC entry 5311 (class 0 OID 17257)
 -- Dependencies: 255
 -- Data for Name: inventariobiologicos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1881,7 +1951,7 @@ COPY public.inventariobiologicos (idinventario, idunidad, idvacuna, fecharegistr
 
 
 --
--- TOC entry 5291 (class 0 OID 17117)
+-- TOC entry 5295 (class 0 OID 17117)
 -- Dependencies: 239
 -- Data for Name: jurisdiccionsanitaria; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1891,7 +1961,7 @@ COPY public.jurisdiccionsanitaria (idjurisdiccion, nombre, region, direccion, te
 
 
 --
--- TOC entry 5276 (class 0 OID 16988)
+-- TOC entry 5280 (class 0 OID 16988)
 -- Dependencies: 224
 -- Data for Name: municipio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1901,7 +1971,7 @@ COPY public.municipio (idmuni, idestado, nombre) FROM stdin;
 
 
 --
--- TOC entry 5285 (class 0 OID 17078)
+-- TOC entry 5289 (class 0 OID 17078)
 -- Dependencies: 233
 -- Data for Name: nino; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1911,7 +1981,7 @@ COPY public.nino (curp, rfc, tutor_curp, tutor_rfc) FROM stdin;
 
 
 --
--- TOC entry 5305 (class 0 OID 17241)
+-- TOC entry 5309 (class 0 OID 17241)
 -- Dependencies: 253
 -- Data for Name: nino_enfermedad; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1921,7 +1991,7 @@ COPY public.nino_enfermedad (nino_curp, nino_rfc, idenferm) FROM stdin;
 
 
 --
--- TOC entry 5319 (class 0 OID 17367)
+-- TOC entry 5323 (class 0 OID 17367)
 -- Dependencies: 267
 -- Data for Name: notificacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1931,7 +2001,7 @@ COPY public.notificacion (idnotificacion, tiporeferencia, idreferencia, tutor_cu
 
 
 --
--- TOC entry 5272 (class 0 OID 16969)
+-- TOC entry 5276 (class 0 OID 16969)
 -- Dependencies: 220
 -- Data for Name: pais; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1941,7 +2011,7 @@ COPY public.pais (idpais, nombre) FROM stdin;
 
 
 --
--- TOC entry 5309 (class 0 OID 17274)
+-- TOC entry 5313 (class 0 OID 17274)
 -- Dependencies: 257
 -- Data for Name: pedidobiologicos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1951,17 +2021,24 @@ COPY public.pedidobiologicos (idpedido, idunidad, enlace_curp, enlace_rfc, fecha
 
 
 --
--- TOC entry 5281 (class 0 OID 17025)
+-- TOC entry 5285 (class 0 OID 17025)
 -- Dependencies: 229
 -- Data for Name: persona; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.persona (curp, rfc, nom, homocv, app, apm, sexo, tel, correo, fnac, tsangre, direc, rol) FROM stdin;
+MARA030910HTCYYNA6	MARA030910	jose angel	\N	may	reyes	H	363898356	angelmay41383@gmail.com	2025-10-15	o+	\N	1
+JANDS132	JANDS132	Instituto	\N	macuspana	Tabasco	H	9876543210	tec@gmail.com	2025-10-20	RH-	\N	1
+NSADSA123A3	NSADSA123A	Instituto	\N	macuspana	Tabasco	H	7986543210	tec123@gmail.com	2025-10-14	a+	\N	1
+NSADSA123A3ADSASD	NSADSA123A	InstiT	\N	macuspI	TabasL	H	123405679	macus@gmail.com	2025-10-14	a+	\N	1
+MARA1947YH57	MARA1947YH	angel	\N	reyes	may	H	9389532014	maiz@gmail.com	2025-10-20	o+	\N	1
+SDUHI13238UISDW	SDUHI13238	jose	\N	magaña	sosa	M	938956201	josue@gmail.com	2025-10-15	A+	\N	2
+tfygvubhu652	tfygvubhu6	jennifer	\N	may	reyes	M	231654897	jeni@gamil.com	2025-10-03	RH-	\N	3
 \.
 
 
 --
--- TOC entry 5300 (class 0 OID 17179)
+-- TOC entry 5304 (class 0 OID 17179)
 -- Dependencies: 248
 -- Data for Name: puntovacunacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1971,7 +2048,7 @@ COPY public.puntovacunacion (idpunto, idcampania, nombre, direccion, horario, re
 
 
 --
--- TOC entry 5302 (class 0 OID 17193)
+-- TOC entry 5306 (class 0 OID 17193)
 -- Dependencies: 250
 -- Data for Name: registrovacunacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1981,7 +2058,7 @@ COPY public.registrovacunacion (idregistro, nino_curp, nino_rfc, idvacuna, perso
 
 
 --
--- TOC entry 5321 (class 0 OID 17388)
+-- TOC entry 5325 (class 0 OID 17388)
 -- Dependencies: 269
 -- Data for Name: reporte; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1991,7 +2068,7 @@ COPY public.reporte (idreporte, idcampania, tipo, fechageneracion, totalvacunado
 
 
 --
--- TOC entry 5315 (class 0 OID 17329)
+-- TOC entry 5319 (class 0 OID 17329)
 -- Dependencies: 263
 -- Data for Name: retirobiologico; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2001,17 +2078,21 @@ COPY public.retirobiologico (idretiro, idpedido, enlace_curp, enlace_rfc, idjuri
 
 
 --
--- TOC entry 5270 (class 0 OID 16959)
+-- TOC entry 5274 (class 0 OID 16959)
 -- Dependencies: 218
 -- Data for Name: rol; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.rol (idrol, nombre, detalles, estado, idespecialidad) FROM stdin;
+1	Administrador	Usuario con acceso total al sistema	habilitado	\N
+2	Doctor	Profesional encargado del registro y control médico	habilitado	\N
+3	Enfermera	Personal auxiliar con funciones de vacunación	habilitado	\N
+4	Tutor	Padre o tutor responsable del menor vacunado	habilitado	\N
 \.
 
 
 --
--- TOC entry 5293 (class 0 OID 17126)
+-- TOC entry 5297 (class 0 OID 17126)
 -- Dependencies: 241
 -- Data for Name: unidaddesalud; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2021,17 +2102,23 @@ COPY public.unidaddesalud (idunidad, idjurisdiccion, nombre, municipio, direccio
 
 
 --
--- TOC entry 5282 (class 0 OID 17043)
+-- TOC entry 5286 (class 0 OID 17043)
 -- Dependencies: 230
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.usuario (curp, rfc, username, password) FROM stdin;
+COPY public.usuario (curp, rfc, username, password, rol, idusuario) FROM stdin;
+MARA030910HTCYYNA6	MARA030910	may	pbkdf2_sha256$1000000$4NA8DnuGVcyerAyI1X0sKX$xMIq5q/u7kPG4O1Kc4AThGl/0hEKnb0RUmUitzJSNxk=	1	1
+JANDS132	JANDS132	itsm	pbkdf2_sha256$1000000$VdOveBJIreaM7huTMSWX2L$IXdZxHJ3yMrNCZvHQ/oUiImIf9iPQALtFyacrVAz5YM=	1	2
+NSADSA123A3ADSASD	NSADSA123A	macus	pbkdf2_sha256$1000000$go7mQHaIJnVQKYhz0R2s6Z$rEJRlHcD8Ce47lqipjid366nx54/SXBS+gtqGd660Cw=	1	4
+MARA1947YH57	MARA1947YH	angel	pbkdf2_sha256$1000000$XCRsYqjwJYX85hcDNUeOvs$/sRzAdayftgApBmqbeJMtIp0CyD0BxLdPSnulutgwE8=	1	5
+SDUHI13238UISDW	SDUHI13238	josue	pbkdf2_sha256$1000000$Xhn6S2SlSN6qDXuK0708xJ$/N+asjIdi51m/veFBuag4C6ZPOjfTQlnwV/OL25Sjtw=	2	6
+tfygvubhu652	tfygvubhu6	jenni	pbkdf2_sha256$1000000$Bo1DDLQSPzSrKwkIfuUmEP$pLcRUXa6B1Rnf/LKDsCx5Qj3Gzgz1Lnng2FbFzQp+Do=	3	7
 \.
 
 
 --
--- TOC entry 5313 (class 0 OID 17309)
+-- TOC entry 5317 (class 0 OID 17309)
 -- Dependencies: 261
 -- Data for Name: validacionpedido; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2041,7 +2128,7 @@ COPY public.validacionpedido (idvalidacion, idpedido, func_curp, func_rfc, fecha
 
 
 --
--- TOC entry 5369 (class 0 OID 0)
+-- TOC entry 5375 (class 0 OID 0)
 -- Dependencies: 264
 -- Name: alerta_idalerta_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2050,16 +2137,16 @@ SELECT pg_catalog.setval('public.alerta_idalerta_seq', 1, false);
 
 
 --
--- TOC entry 5370 (class 0 OID 0)
+-- TOC entry 5376 (class 0 OID 0)
 -- Dependencies: 276
 -- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+SELECT pg_catalog.setval('public.auth_group_id_seq', 4, true);
 
 
 --
--- TOC entry 5371 (class 0 OID 0)
+-- TOC entry 5377 (class 0 OID 0)
 -- Dependencies: 278
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2068,34 +2155,34 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 5372 (class 0 OID 0)
+-- TOC entry 5378 (class 0 OID 0)
 -- Dependencies: 274
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_permission_id_seq', 24, true);
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 40, true);
 
 
 --
--- TOC entry 5373 (class 0 OID 0)
+-- TOC entry 5379 (class 0 OID 0)
 -- Dependencies: 282
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 4, true);
 
 
 --
--- TOC entry 5374 (class 0 OID 0)
+-- TOC entry 5380 (class 0 OID 0)
 -- Dependencies: 280
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 6, true);
 
 
 --
--- TOC entry 5375 (class 0 OID 0)
+-- TOC entry 5381 (class 0 OID 0)
 -- Dependencies: 284
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2104,7 +2191,7 @@ SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 5376 (class 0 OID 0)
+-- TOC entry 5382 (class 0 OID 0)
 -- Dependencies: 236
 -- Name: biologico_idvacuna_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2113,7 +2200,7 @@ SELECT pg_catalog.setval('public.biologico_idvacuna_seq', 1, false);
 
 
 --
--- TOC entry 5377 (class 0 OID 0)
+-- TOC entry 5383 (class 0 OID 0)
 -- Dependencies: 245
 -- Name: campaniavacunacion_idcampania_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2122,7 +2209,7 @@ SELECT pg_catalog.setval('public.campaniavacunacion_idcampania_seq', 1, false);
 
 
 --
--- TOC entry 5378 (class 0 OID 0)
+-- TOC entry 5384 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: censonominal_idcenso_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2131,7 +2218,7 @@ SELECT pg_catalog.setval('public.censonominal_idcenso_seq', 1, false);
 
 
 --
--- TOC entry 5379 (class 0 OID 0)
+-- TOC entry 5385 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: colonia_idcol_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2140,7 +2227,7 @@ SELECT pg_catalog.setval('public.colonia_idcol_seq', 1, false);
 
 
 --
--- TOC entry 5380 (class 0 OID 0)
+-- TOC entry 5386 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: detallepedido_iddetalle_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2149,7 +2236,7 @@ SELECT pg_catalog.setval('public.detallepedido_iddetalle_seq', 1, false);
 
 
 --
--- TOC entry 5381 (class 0 OID 0)
+-- TOC entry 5387 (class 0 OID 0)
 -- Dependencies: 227
 -- Name: direccion_iddireccion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2158,7 +2245,7 @@ SELECT pg_catalog.setval('public.direccion_iddireccion_seq', 1, false);
 
 
 --
--- TOC entry 5382 (class 0 OID 0)
+-- TOC entry 5388 (class 0 OID 0)
 -- Dependencies: 286
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2167,25 +2254,25 @@ SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
 
 
 --
--- TOC entry 5383 (class 0 OID 0)
+-- TOC entry 5389 (class 0 OID 0)
 -- Dependencies: 272
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_content_type_id_seq', 6, true);
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 10, true);
 
 
 --
--- TOC entry 5384 (class 0 OID 0)
+-- TOC entry 5390 (class 0 OID 0)
 -- Dependencies: 270
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 18, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 20, true);
 
 
 --
--- TOC entry 5385 (class 0 OID 0)
+-- TOC entry 5391 (class 0 OID 0)
 -- Dependencies: 251
 -- Name: enfermedad_idenferm_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2194,7 +2281,7 @@ SELECT pg_catalog.setval('public.enfermedad_idenferm_seq', 1, false);
 
 
 --
--- TOC entry 5386 (class 0 OID 0)
+-- TOC entry 5392 (class 0 OID 0)
 -- Dependencies: 234
 -- Name: esquemavacunacion_idesquema_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2203,7 +2290,7 @@ SELECT pg_catalog.setval('public.esquemavacunacion_idesquema_seq', 1, false);
 
 
 --
--- TOC entry 5387 (class 0 OID 0)
+-- TOC entry 5393 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: estado_idestado_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2212,7 +2299,7 @@ SELECT pg_catalog.setval('public.estado_idestado_seq', 1, false);
 
 
 --
--- TOC entry 5388 (class 0 OID 0)
+-- TOC entry 5394 (class 0 OID 0)
 -- Dependencies: 254
 -- Name: inventariobiologicos_idinventario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2221,7 +2308,7 @@ SELECT pg_catalog.setval('public.inventariobiologicos_idinventario_seq', 1, fals
 
 
 --
--- TOC entry 5389 (class 0 OID 0)
+-- TOC entry 5395 (class 0 OID 0)
 -- Dependencies: 238
 -- Name: jurisdiccionsanitaria_idjurisdiccion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2230,7 +2317,7 @@ SELECT pg_catalog.setval('public.jurisdiccionsanitaria_idjurisdiccion_seq', 1, f
 
 
 --
--- TOC entry 5390 (class 0 OID 0)
+-- TOC entry 5396 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: municipio_idmuni_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2239,7 +2326,7 @@ SELECT pg_catalog.setval('public.municipio_idmuni_seq', 1, false);
 
 
 --
--- TOC entry 5391 (class 0 OID 0)
+-- TOC entry 5397 (class 0 OID 0)
 -- Dependencies: 266
 -- Name: notificacion_idnotificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2248,7 +2335,7 @@ SELECT pg_catalog.setval('public.notificacion_idnotificacion_seq', 1, false);
 
 
 --
--- TOC entry 5392 (class 0 OID 0)
+-- TOC entry 5398 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: pais_idpais_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2257,7 +2344,7 @@ SELECT pg_catalog.setval('public.pais_idpais_seq', 1, false);
 
 
 --
--- TOC entry 5393 (class 0 OID 0)
+-- TOC entry 5399 (class 0 OID 0)
 -- Dependencies: 256
 -- Name: pedidobiologicos_idpedido_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2266,7 +2353,7 @@ SELECT pg_catalog.setval('public.pedidobiologicos_idpedido_seq', 1, false);
 
 
 --
--- TOC entry 5394 (class 0 OID 0)
+-- TOC entry 5400 (class 0 OID 0)
 -- Dependencies: 247
 -- Name: puntovacunacion_idpunto_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2275,7 +2362,7 @@ SELECT pg_catalog.setval('public.puntovacunacion_idpunto_seq', 1, false);
 
 
 --
--- TOC entry 5395 (class 0 OID 0)
+-- TOC entry 5401 (class 0 OID 0)
 -- Dependencies: 249
 -- Name: registrovacunacion_idregistro_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2284,7 +2371,7 @@ SELECT pg_catalog.setval('public.registrovacunacion_idregistro_seq', 1, false);
 
 
 --
--- TOC entry 5396 (class 0 OID 0)
+-- TOC entry 5402 (class 0 OID 0)
 -- Dependencies: 268
 -- Name: reporte_idreporte_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2293,7 +2380,7 @@ SELECT pg_catalog.setval('public.reporte_idreporte_seq', 1, false);
 
 
 --
--- TOC entry 5397 (class 0 OID 0)
+-- TOC entry 5403 (class 0 OID 0)
 -- Dependencies: 262
 -- Name: retirobiologico_idretiro_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2302,16 +2389,16 @@ SELECT pg_catalog.setval('public.retirobiologico_idretiro_seq', 1, false);
 
 
 --
--- TOC entry 5398 (class 0 OID 0)
+-- TOC entry 5404 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: rol_idrol_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.rol_idrol_seq', 1, false);
+SELECT pg_catalog.setval('public.rol_idrol_seq', 4, true);
 
 
 --
--- TOC entry 5399 (class 0 OID 0)
+-- TOC entry 5405 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: unidaddesalud_idunidad_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2320,7 +2407,16 @@ SELECT pg_catalog.setval('public.unidaddesalud_idunidad_seq', 1, false);
 
 
 --
--- TOC entry 5400 (class 0 OID 0)
+-- TOC entry 5406 (class 0 OID 0)
+-- Dependencies: 289
+-- Name: usuario_idusuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.usuario_idusuario_seq', 7, true);
+
+
+--
+-- TOC entry 5407 (class 0 OID 0)
 -- Dependencies: 260
 -- Name: validacionpedido_idvalidacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2329,7 +2425,7 @@ SELECT pg_catalog.setval('public.validacionpedido_idvalidacion_seq', 1, false);
 
 
 --
--- TOC entry 5023 (class 2606 OID 17360)
+-- TOC entry 5026 (class 2606 OID 17360)
 -- Name: alerta alerta_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2338,7 +2434,7 @@ ALTER TABLE ONLY public.alerta
 
 
 --
--- TOC entry 5041 (class 2606 OID 17539)
+-- TOC entry 5044 (class 2606 OID 17539)
 -- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2347,7 +2443,7 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 5046 (class 2606 OID 17470)
+-- TOC entry 5049 (class 2606 OID 17470)
 -- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2356,7 +2452,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 5049 (class 2606 OID 17439)
+-- TOC entry 5052 (class 2606 OID 17439)
 -- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2365,7 +2461,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 5043 (class 2606 OID 17431)
+-- TOC entry 5046 (class 2606 OID 17431)
 -- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2374,7 +2470,7 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 5036 (class 2606 OID 17461)
+-- TOC entry 5039 (class 2606 OID 17461)
 -- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2383,7 +2479,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 5038 (class 2606 OID 17425)
+-- TOC entry 5041 (class 2606 OID 17425)
 -- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2392,7 +2488,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 5057 (class 2606 OID 17453)
+-- TOC entry 5060 (class 2606 OID 17453)
 -- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2401,7 +2497,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 5060 (class 2606 OID 17485)
+-- TOC entry 5063 (class 2606 OID 17485)
 -- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2410,7 +2506,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 5051 (class 2606 OID 17445)
+-- TOC entry 5054 (class 2606 OID 17445)
 -- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2419,7 +2515,7 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 5063 (class 2606 OID 17459)
+-- TOC entry 5066 (class 2606 OID 17459)
 -- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2428,7 +2524,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 5066 (class 2606 OID 17499)
+-- TOC entry 5069 (class 2606 OID 17499)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2437,7 +2533,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 5054 (class 2606 OID 17534)
+-- TOC entry 5057 (class 2606 OID 17534)
 -- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2446,7 +2542,7 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 4993 (class 2606 OID 17110)
+-- TOC entry 4996 (class 2606 OID 17110)
 -- Name: biologico biologico_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2455,7 +2551,7 @@ ALTER TABLE ONLY public.biologico
 
 
 --
--- TOC entry 5003 (class 2606 OID 17177)
+-- TOC entry 5006 (class 2606 OID 17177)
 -- Name: campaniavacunacion campaniavacunacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2464,7 +2560,7 @@ ALTER TABLE ONLY public.campaniavacunacion
 
 
 --
--- TOC entry 5001 (class 2606 OID 17157)
+-- TOC entry 5004 (class 2606 OID 17157)
 -- Name: censonino censonino_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2473,7 +2569,7 @@ ALTER TABLE ONLY public.censonino
 
 
 --
--- TOC entry 4999 (class 2606 OID 17147)
+-- TOC entry 5002 (class 2606 OID 17147)
 -- Name: censonominal censonominal_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2482,7 +2578,7 @@ ALTER TABLE ONLY public.censonominal
 
 
 --
--- TOC entry 4971 (class 2606 OID 17005)
+-- TOC entry 4974 (class 2606 OID 17005)
 -- Name: colonia colonia_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2491,7 +2587,7 @@ ALTER TABLE ONLY public.colonia
 
 
 --
--- TOC entry 5017 (class 2606 OID 17297)
+-- TOC entry 5020 (class 2606 OID 17297)
 -- Name: detallepedido detallepedido_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2500,7 +2596,7 @@ ALTER TABLE ONLY public.detallepedido
 
 
 --
--- TOC entry 4973 (class 2606 OID 17019)
+-- TOC entry 4976 (class 2606 OID 17019)
 -- Name: direccion direccion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2509,7 +2605,7 @@ ALTER TABLE ONLY public.direccion
 
 
 --
--- TOC entry 5069 (class 2606 OID 17520)
+-- TOC entry 5072 (class 2606 OID 17520)
 -- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2518,7 +2614,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 5031 (class 2606 OID 17419)
+-- TOC entry 5034 (class 2606 OID 17419)
 -- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2527,7 +2623,7 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 5033 (class 2606 OID 17417)
+-- TOC entry 5036 (class 2606 OID 17417)
 -- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2536,7 +2632,7 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 5029 (class 2606 OID 17411)
+-- TOC entry 5032 (class 2606 OID 17411)
 -- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2545,7 +2641,7 @@ ALTER TABLE ONLY public.django_migrations
 
 
 --
--- TOC entry 5073 (class 2606 OID 17547)
+-- TOC entry 5076 (class 2606 OID 17547)
 -- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2554,7 +2650,7 @@ ALTER TABLE ONLY public.django_session
 
 
 --
--- TOC entry 5009 (class 2606 OID 17240)
+-- TOC entry 5012 (class 2606 OID 17240)
 -- Name: enfermedad enfermedad_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2563,7 +2659,7 @@ ALTER TABLE ONLY public.enfermedad
 
 
 --
--- TOC entry 4983 (class 2606 OID 17062)
+-- TOC entry 4986 (class 2606 OID 17062)
 -- Name: enlacevacunacion enlacevacunacion_foliocredencial_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2572,7 +2668,7 @@ ALTER TABLE ONLY public.enlacevacunacion
 
 
 --
--- TOC entry 4985 (class 2606 OID 17060)
+-- TOC entry 4988 (class 2606 OID 17060)
 -- Name: enlacevacunacion enlacevacunacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2581,7 +2677,7 @@ ALTER TABLE ONLY public.enlacevacunacion
 
 
 --
--- TOC entry 4991 (class 2606 OID 17101)
+-- TOC entry 4994 (class 2606 OID 17101)
 -- Name: esquemavacunacion esquemavacunacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2590,7 +2686,7 @@ ALTER TABLE ONLY public.esquemavacunacion
 
 
 --
--- TOC entry 4967 (class 2606 OID 16981)
+-- TOC entry 4970 (class 2606 OID 16981)
 -- Name: estado estado_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2599,7 +2695,7 @@ ALTER TABLE ONLY public.estado
 
 
 --
--- TOC entry 4987 (class 2606 OID 17072)
+-- TOC entry 4990 (class 2606 OID 17072)
 -- Name: funcionariojurisdiccion funcionariojurisdiccion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2608,7 +2704,7 @@ ALTER TABLE ONLY public.funcionariojurisdiccion
 
 
 --
--- TOC entry 5013 (class 2606 OID 17262)
+-- TOC entry 5016 (class 2606 OID 17262)
 -- Name: inventariobiologicos inventariobiologicos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2617,7 +2713,7 @@ ALTER TABLE ONLY public.inventariobiologicos
 
 
 --
--- TOC entry 4995 (class 2606 OID 17124)
+-- TOC entry 4998 (class 2606 OID 17124)
 -- Name: jurisdiccionsanitaria jurisdiccionsanitaria_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2626,7 +2722,7 @@ ALTER TABLE ONLY public.jurisdiccionsanitaria
 
 
 --
--- TOC entry 4969 (class 2606 OID 16993)
+-- TOC entry 4972 (class 2606 OID 16993)
 -- Name: municipio municipio_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2635,7 +2731,7 @@ ALTER TABLE ONLY public.municipio
 
 
 --
--- TOC entry 5011 (class 2606 OID 17245)
+-- TOC entry 5014 (class 2606 OID 17245)
 -- Name: nino_enfermedad nino_enfermedad_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2644,7 +2740,7 @@ ALTER TABLE ONLY public.nino_enfermedad
 
 
 --
--- TOC entry 4989 (class 2606 OID 17082)
+-- TOC entry 4992 (class 2606 OID 17082)
 -- Name: nino nino_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2653,7 +2749,7 @@ ALTER TABLE ONLY public.nino
 
 
 --
--- TOC entry 5025 (class 2606 OID 17376)
+-- TOC entry 5028 (class 2606 OID 17376)
 -- Name: notificacion notificacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2662,7 +2758,7 @@ ALTER TABLE ONLY public.notificacion
 
 
 --
--- TOC entry 4965 (class 2606 OID 16974)
+-- TOC entry 4968 (class 2606 OID 16974)
 -- Name: pais pais_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2671,7 +2767,7 @@ ALTER TABLE ONLY public.pais
 
 
 --
--- TOC entry 5015 (class 2606 OID 17280)
+-- TOC entry 5018 (class 2606 OID 17280)
 -- Name: pedidobiologicos pedidobiologicos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2680,7 +2776,7 @@ ALTER TABLE ONLY public.pedidobiologicos
 
 
 --
--- TOC entry 4975 (class 2606 OID 17032)
+-- TOC entry 4978 (class 2606 OID 17032)
 -- Name: persona persona_correo_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2689,7 +2785,7 @@ ALTER TABLE ONLY public.persona
 
 
 --
--- TOC entry 4977 (class 2606 OID 17030)
+-- TOC entry 4980 (class 2606 OID 17030)
 -- Name: persona persona_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2698,7 +2794,7 @@ ALTER TABLE ONLY public.persona
 
 
 --
--- TOC entry 5005 (class 2606 OID 17186)
+-- TOC entry 5008 (class 2606 OID 17186)
 -- Name: puntovacunacion puntovacunacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2707,7 +2803,7 @@ ALTER TABLE ONLY public.puntovacunacion
 
 
 --
--- TOC entry 5007 (class 2606 OID 17201)
+-- TOC entry 5010 (class 2606 OID 17201)
 -- Name: registrovacunacion registrovacunacion_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2716,7 +2812,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5027 (class 2606 OID 17395)
+-- TOC entry 5030 (class 2606 OID 17395)
 -- Name: reporte reporte_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2725,7 +2821,7 @@ ALTER TABLE ONLY public.reporte
 
 
 --
--- TOC entry 5021 (class 2606 OID 17336)
+-- TOC entry 5024 (class 2606 OID 17336)
 -- Name: retirobiologico retirobiologico_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2734,7 +2830,7 @@ ALTER TABLE ONLY public.retirobiologico
 
 
 --
--- TOC entry 4963 (class 2606 OID 16967)
+-- TOC entry 4966 (class 2606 OID 16967)
 -- Name: rol rol_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2743,7 +2839,7 @@ ALTER TABLE ONLY public.rol
 
 
 --
--- TOC entry 4997 (class 2606 OID 17133)
+-- TOC entry 5000 (class 2606 OID 17133)
 -- Name: unidaddesalud unidaddesalud_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2752,16 +2848,16 @@ ALTER TABLE ONLY public.unidaddesalud
 
 
 --
--- TOC entry 4979 (class 2606 OID 17047)
+-- TOC entry 4982 (class 2606 OID 17568)
 -- Name: usuario usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.usuario
-    ADD CONSTRAINT usuario_pkey PRIMARY KEY (curp, rfc);
+    ADD CONSTRAINT usuario_pkey PRIMARY KEY (idusuario);
 
 
 --
--- TOC entry 4981 (class 2606 OID 17049)
+-- TOC entry 4984 (class 2606 OID 17049)
 -- Name: usuario usuario_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2770,7 +2866,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- TOC entry 5019 (class 2606 OID 17317)
+-- TOC entry 5022 (class 2606 OID 17317)
 -- Name: validacionpedido validacionpedido_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2779,7 +2875,7 @@ ALTER TABLE ONLY public.validacionpedido
 
 
 --
--- TOC entry 5039 (class 1259 OID 17540)
+-- TOC entry 5042 (class 1259 OID 17540)
 -- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2787,7 +2883,7 @@ CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (nam
 
 
 --
--- TOC entry 5044 (class 1259 OID 17481)
+-- TOC entry 5047 (class 1259 OID 17481)
 -- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2795,7 +2891,7 @@ CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permi
 
 
 --
--- TOC entry 5047 (class 1259 OID 17482)
+-- TOC entry 5050 (class 1259 OID 17482)
 -- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2803,7 +2899,7 @@ CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_
 
 
 --
--- TOC entry 5034 (class 1259 OID 17467)
+-- TOC entry 5037 (class 1259 OID 17467)
 -- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2811,7 +2907,7 @@ CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission 
 
 
 --
--- TOC entry 5055 (class 1259 OID 17497)
+-- TOC entry 5058 (class 1259 OID 17497)
 -- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2819,7 +2915,7 @@ CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING
 
 
 --
--- TOC entry 5058 (class 1259 OID 17496)
+-- TOC entry 5061 (class 1259 OID 17496)
 -- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2827,7 +2923,7 @@ CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING 
 
 
 --
--- TOC entry 5061 (class 1259 OID 17511)
+-- TOC entry 5064 (class 1259 OID 17511)
 -- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2835,7 +2931,7 @@ CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_us
 
 
 --
--- TOC entry 5064 (class 1259 OID 17510)
+-- TOC entry 5067 (class 1259 OID 17510)
 -- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2843,7 +2939,7 @@ CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_use
 
 
 --
--- TOC entry 5052 (class 1259 OID 17535)
+-- TOC entry 5055 (class 1259 OID 17535)
 -- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2851,7 +2947,7 @@ CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (u
 
 
 --
--- TOC entry 5067 (class 1259 OID 17531)
+-- TOC entry 5070 (class 1259 OID 17531)
 -- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2859,7 +2955,7 @@ CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_lo
 
 
 --
--- TOC entry 5070 (class 1259 OID 17532)
+-- TOC entry 5073 (class 1259 OID 17532)
 -- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2867,7 +2963,7 @@ CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING 
 
 
 --
--- TOC entry 5071 (class 1259 OID 17549)
+-- TOC entry 5074 (class 1259 OID 17549)
 -- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2875,7 +2971,7 @@ CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING 
 
 
 --
--- TOC entry 5074 (class 1259 OID 17548)
+-- TOC entry 5077 (class 1259 OID 17548)
 -- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -2883,7 +2979,7 @@ CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session U
 
 
 --
--- TOC entry 5111 (class 2606 OID 17361)
+-- TOC entry 5115 (class 2606 OID 17361)
 -- Name: alerta alerta_nino_curp_nino_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2892,7 +2988,7 @@ ALTER TABLE ONLY public.alerta
 
 
 --
--- TOC entry 5116 (class 2606 OID 17476)
+-- TOC entry 5120 (class 2606 OID 17476)
 -- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2901,7 +2997,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 5117 (class 2606 OID 17471)
+-- TOC entry 5121 (class 2606 OID 17471)
 -- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2910,7 +3006,7 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 5115 (class 2606 OID 17462)
+-- TOC entry 5119 (class 2606 OID 17462)
 -- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2919,7 +3015,7 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 5118 (class 2606 OID 17491)
+-- TOC entry 5122 (class 2606 OID 17491)
 -- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2928,7 +3024,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 5119 (class 2606 OID 17486)
+-- TOC entry 5123 (class 2606 OID 17486)
 -- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2937,7 +3033,7 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 5120 (class 2606 OID 17505)
+-- TOC entry 5124 (class 2606 OID 17505)
 -- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2946,7 +3042,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 5121 (class 2606 OID 17500)
+-- TOC entry 5125 (class 2606 OID 17500)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2955,7 +3051,7 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 5086 (class 2606 OID 17111)
+-- TOC entry 5090 (class 2606 OID 17111)
 -- Name: biologico biologico_idesquema_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2964,7 +3060,7 @@ ALTER TABLE ONLY public.biologico
 
 
 --
--- TOC entry 5089 (class 2606 OID 17158)
+-- TOC entry 5093 (class 2606 OID 17158)
 -- Name: censonino censonino_idcenso_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2973,7 +3069,7 @@ ALTER TABLE ONLY public.censonino
 
 
 --
--- TOC entry 5090 (class 2606 OID 17163)
+-- TOC entry 5094 (class 2606 OID 17163)
 -- Name: censonino censonino_nino_curp_nino_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2982,7 +3078,7 @@ ALTER TABLE ONLY public.censonino
 
 
 --
--- TOC entry 5088 (class 2606 OID 17148)
+-- TOC entry 5092 (class 2606 OID 17148)
 -- Name: censonominal censonominal_idunidad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2991,7 +3087,7 @@ ALTER TABLE ONLY public.censonominal
 
 
 --
--- TOC entry 5077 (class 2606 OID 17006)
+-- TOC entry 5080 (class 2606 OID 17006)
 -- Name: colonia colonia_idmuni_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3000,7 +3096,7 @@ ALTER TABLE ONLY public.colonia
 
 
 --
--- TOC entry 5104 (class 2606 OID 17298)
+-- TOC entry 5108 (class 2606 OID 17298)
 -- Name: detallepedido detallepedido_idpedido_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3009,7 +3105,7 @@ ALTER TABLE ONLY public.detallepedido
 
 
 --
--- TOC entry 5105 (class 2606 OID 17303)
+-- TOC entry 5109 (class 2606 OID 17303)
 -- Name: detallepedido detallepedido_idvacuna_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3018,7 +3114,7 @@ ALTER TABLE ONLY public.detallepedido
 
 
 --
--- TOC entry 5078 (class 2606 OID 17020)
+-- TOC entry 5081 (class 2606 OID 17020)
 -- Name: direccion direccion_idcol_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3027,7 +3123,7 @@ ALTER TABLE ONLY public.direccion
 
 
 --
--- TOC entry 5122 (class 2606 OID 17521)
+-- TOC entry 5126 (class 2606 OID 17521)
 -- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3036,7 +3132,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 5123 (class 2606 OID 17526)
+-- TOC entry 5127 (class 2606 OID 17526)
 -- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3045,7 +3141,7 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 5082 (class 2606 OID 17063)
+-- TOC entry 5086 (class 2606 OID 17063)
 -- Name: enlacevacunacion enlacevacunacion_curp_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3054,7 +3150,7 @@ ALTER TABLE ONLY public.enlacevacunacion
 
 
 --
--- TOC entry 5075 (class 2606 OID 16982)
+-- TOC entry 5078 (class 2606 OID 16982)
 -- Name: estado estado_idpais_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3063,7 +3159,7 @@ ALTER TABLE ONLY public.estado
 
 
 --
--- TOC entry 5083 (class 2606 OID 17073)
+-- TOC entry 5087 (class 2606 OID 17073)
 -- Name: funcionariojurisdiccion funcionariojurisdiccion_curp_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3072,7 +3168,7 @@ ALTER TABLE ONLY public.funcionariojurisdiccion
 
 
 --
--- TOC entry 5100 (class 2606 OID 17263)
+-- TOC entry 5104 (class 2606 OID 17263)
 -- Name: inventariobiologicos inventariobiologicos_idunidad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3081,7 +3177,7 @@ ALTER TABLE ONLY public.inventariobiologicos
 
 
 --
--- TOC entry 5101 (class 2606 OID 17268)
+-- TOC entry 5105 (class 2606 OID 17268)
 -- Name: inventariobiologicos inventariobiologicos_idvacuna_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3090,7 +3186,7 @@ ALTER TABLE ONLY public.inventariobiologicos
 
 
 --
--- TOC entry 5076 (class 2606 OID 16994)
+-- TOC entry 5079 (class 2606 OID 16994)
 -- Name: municipio municipio_idestado_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3099,7 +3195,7 @@ ALTER TABLE ONLY public.municipio
 
 
 --
--- TOC entry 5084 (class 2606 OID 17083)
+-- TOC entry 5088 (class 2606 OID 17083)
 -- Name: nino nino_curp_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3108,7 +3204,7 @@ ALTER TABLE ONLY public.nino
 
 
 --
--- TOC entry 5098 (class 2606 OID 17246)
+-- TOC entry 5102 (class 2606 OID 17246)
 -- Name: nino_enfermedad nino_enfermedad_idenferm_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3117,7 +3213,7 @@ ALTER TABLE ONLY public.nino_enfermedad
 
 
 --
--- TOC entry 5099 (class 2606 OID 17251)
+-- TOC entry 5103 (class 2606 OID 17251)
 -- Name: nino_enfermedad nino_enfermedad_nino_curp_nino_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3126,7 +3222,7 @@ ALTER TABLE ONLY public.nino_enfermedad
 
 
 --
--- TOC entry 5085 (class 2606 OID 17088)
+-- TOC entry 5089 (class 2606 OID 17088)
 -- Name: nino nino_tutor_curp_tutor_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3135,7 +3231,7 @@ ALTER TABLE ONLY public.nino
 
 
 --
--- TOC entry 5112 (class 2606 OID 17382)
+-- TOC entry 5116 (class 2606 OID 17382)
 -- Name: notificacion notificacion_enlace_curp_enlace_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3144,7 +3240,7 @@ ALTER TABLE ONLY public.notificacion
 
 
 --
--- TOC entry 5113 (class 2606 OID 17377)
+-- TOC entry 5117 (class 2606 OID 17377)
 -- Name: notificacion notificacion_tutor_curp_tutor_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3153,7 +3249,7 @@ ALTER TABLE ONLY public.notificacion
 
 
 --
--- TOC entry 5102 (class 2606 OID 17286)
+-- TOC entry 5106 (class 2606 OID 17286)
 -- Name: pedidobiologicos pedidobiologicos_enlace_curp_enlace_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3162,7 +3258,7 @@ ALTER TABLE ONLY public.pedidobiologicos
 
 
 --
--- TOC entry 5103 (class 2606 OID 17281)
+-- TOC entry 5107 (class 2606 OID 17281)
 -- Name: pedidobiologicos pedidobiologicos_idunidad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3171,7 +3267,7 @@ ALTER TABLE ONLY public.pedidobiologicos
 
 
 --
--- TOC entry 5079 (class 2606 OID 17033)
+-- TOC entry 5082 (class 2606 OID 17033)
 -- Name: persona persona_direc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3180,7 +3276,7 @@ ALTER TABLE ONLY public.persona
 
 
 --
--- TOC entry 5080 (class 2606 OID 17038)
+-- TOC entry 5083 (class 2606 OID 17551)
 -- Name: persona persona_rol_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3189,7 +3285,7 @@ ALTER TABLE ONLY public.persona
 
 
 --
--- TOC entry 5091 (class 2606 OID 17187)
+-- TOC entry 5095 (class 2606 OID 17187)
 -- Name: puntovacunacion puntovacunacion_idcampania_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3198,7 +3294,7 @@ ALTER TABLE ONLY public.puntovacunacion
 
 
 --
--- TOC entry 5092 (class 2606 OID 17207)
+-- TOC entry 5096 (class 2606 OID 17207)
 -- Name: registrovacunacion registrovacunacion_idcampania_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3207,7 +3303,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5093 (class 2606 OID 17212)
+-- TOC entry 5097 (class 2606 OID 17212)
 -- Name: registrovacunacion registrovacunacion_idpunto_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3216,7 +3312,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5094 (class 2606 OID 17217)
+-- TOC entry 5098 (class 2606 OID 17217)
 -- Name: registrovacunacion registrovacunacion_idunidad_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3225,7 +3321,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5095 (class 2606 OID 17202)
+-- TOC entry 5099 (class 2606 OID 17202)
 -- Name: registrovacunacion registrovacunacion_idvacuna_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3234,7 +3330,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5096 (class 2606 OID 17222)
+-- TOC entry 5100 (class 2606 OID 17222)
 -- Name: registrovacunacion registrovacunacion_nino_curp_nino_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3243,7 +3339,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5097 (class 2606 OID 17227)
+-- TOC entry 5101 (class 2606 OID 17227)
 -- Name: registrovacunacion registrovacunacion_personal_curp_personal_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3252,7 +3348,7 @@ ALTER TABLE ONLY public.registrovacunacion
 
 
 --
--- TOC entry 5114 (class 2606 OID 17396)
+-- TOC entry 5118 (class 2606 OID 17396)
 -- Name: reporte reporte_idcampania_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3261,7 +3357,7 @@ ALTER TABLE ONLY public.reporte
 
 
 --
--- TOC entry 5108 (class 2606 OID 17347)
+-- TOC entry 5112 (class 2606 OID 17347)
 -- Name: retirobiologico retirobiologico_enlace_curp_enlace_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3270,7 +3366,7 @@ ALTER TABLE ONLY public.retirobiologico
 
 
 --
--- TOC entry 5109 (class 2606 OID 17342)
+-- TOC entry 5113 (class 2606 OID 17342)
 -- Name: retirobiologico retirobiologico_idjurisdiccion_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3279,7 +3375,7 @@ ALTER TABLE ONLY public.retirobiologico
 
 
 --
--- TOC entry 5110 (class 2606 OID 17337)
+-- TOC entry 5114 (class 2606 OID 17337)
 -- Name: retirobiologico retirobiologico_idpedido_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3288,7 +3384,7 @@ ALTER TABLE ONLY public.retirobiologico
 
 
 --
--- TOC entry 5087 (class 2606 OID 17134)
+-- TOC entry 5091 (class 2606 OID 17134)
 -- Name: unidaddesalud unidaddesalud_idjurisdiccion_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3297,7 +3393,7 @@ ALTER TABLE ONLY public.unidaddesalud
 
 
 --
--- TOC entry 5081 (class 2606 OID 17050)
+-- TOC entry 5084 (class 2606 OID 17050)
 -- Name: usuario usuario_curp_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3306,7 +3402,16 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- TOC entry 5106 (class 2606 OID 17323)
+-- TOC entry 5085 (class 2606 OID 17556)
+-- Name: usuario usuario_rol_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.usuario
+    ADD CONSTRAINT usuario_rol_fkey FOREIGN KEY (rol) REFERENCES public.rol(idrol);
+
+
+--
+-- TOC entry 5110 (class 2606 OID 17323)
 -- Name: validacionpedido validacionpedido_func_curp_func_rfc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3315,7 +3420,7 @@ ALTER TABLE ONLY public.validacionpedido
 
 
 --
--- TOC entry 5107 (class 2606 OID 17318)
+-- TOC entry 5111 (class 2606 OID 17318)
 -- Name: validacionpedido validacionpedido_idpedido_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3323,11 +3428,11 @@ ALTER TABLE ONLY public.validacionpedido
     ADD CONSTRAINT validacionpedido_idpedido_fkey FOREIGN KEY (idpedido) REFERENCES public.pedidobiologicos(idpedido);
 
 
--- Completed on 2025-10-10 14:33:14
+-- Completed on 2025-10-16 22:01:00
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Tr21h2wQmWD89LHtazNxGhAV7pMKR5uVNBX3O9JLLpgtFWgvOBUkgg61U1v0tOd
+\unrestrict Ya0LcVusSFuRMu5JYu0o4IYTW9oTmwRbouRc0Y6PgkXMBWFv8qVSXwfG7XRquvc
 

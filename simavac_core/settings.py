@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'backend.enfermera_app',
     'backend.doctor_app',
     'backend.tutor_app',
-    'backend.auth_app'
+    'backend.auth_app',
+    'backend.vacunas_app',
+    'backend.biologicos_app',
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -99,23 +101,40 @@ DATABASES = {
 # ──────────────────────────────────────────────────────────────────────────────
 # AUTENTICACIÓN DRF + JWT
 # ──────────────────────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────────────────────────────────────
+# AUTENTICACIÓN DRF + JWT
+# ──────────────────────────────────────────────────────────────────────────────
+from datetime import timedelta
+from datetime import timedelta
+import os
+
+# ============================================================
+# ⚙️ REST FRAMEWORK CONFIG
+# ============================================================
+from datetime import timedelta
+import os
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # Desactiva autenticación JWT global para vistas públicas
-        'rest_framework.authentication.BasicAuthentication',
+        'backend.auth_app.custom_auth.CustomJWTAuthentication',  # ✅ personalizada
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
     ),
 }
 
-
-SIMPLE_JWT = {    
-    "USER_ID_FIELD": "curp",
-    "USER_ID_CLAIM": "curp",
+SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-    "ROTATE_REFRESH_TOKENS": True,
-    "BLACKLIST_AFTER_ROTATION": True,
+    "USER_ID_FIELD": "id",
+    "USER_ID_CLAIM": "user_id",
+    "SIGNING_KEY": os.getenv("SECRET_KEY", "django-insecure-CHANGE-ME"),
+    "ALGORITHM": "HS256",
+    "AUTH_HEADER_TYPES": ("Bearer",),
 }
+
+
 
 # ──────────────────────────────────────────────────────────────────────────────
 # VALIDACIÓN DE CONTRASEÑAS

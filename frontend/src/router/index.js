@@ -1,16 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// 🟢 Autenticación
+// ======= Vistas principales =======
 import LoginView from "@/views/auth/LoginView.vue";
 import Register from "@/views/auth/Register.vue";
-
-// 🟢 Dashboards
 import AdminDashboard from "@/views/admin/Dashboard.vue";
 import EnfermeraDashboard from "@/views/enfermera/Dashboard.vue";
 import TutorDashboard from "@/views/tutor/Dashboard.vue";
 import DoctorDashboard from "@/views/doctor/Dashboard.vue";
 
-// 🟢 Admin - Subvistas
+// ======= Módulos del Administrador =======
 import Usuarios from "@/views/admin/usuarios.vue";
 import Configuracion from "@/views/admin/configuracion.vue";
 import RegistrarVacuna from "@/views/admin/vacunas/RegistrarVacuna.vue";
@@ -21,7 +19,7 @@ import HistorialCampanias from "@/views/admin/campanias/HistorialCampanias.vue";
 import ReportesVacunas from "@/views/admin/reportes/ReportesVacunas.vue";
 import ReportesCampanias from "@/views/admin/reportes/ReportesCampanias.vue";
 
-// 🟢 Errores
+// ======= Errores =======
 import AccesoDenegado from "@/views/errores/AccesoDenegado.vue";
 
 const routes = [
@@ -38,6 +36,7 @@ const routes = [
     component: AdminDashboard,
     meta: { requiresAuth: true, roles: ["Administrador"] },
     children: [
+      // --- Submódulos generales del administrador ---
       { path: "usuarios", component: Usuarios },
       { path: "configuracion", component: Configuracion },
       { path: "vacunas/registrar", component: RegistrarVacuna },
@@ -46,7 +45,53 @@ const routes = [
       { path: "campanias/ver", component: VerCampanias },
       { path: "campanias/historial", component: HistorialCampanias },
       { path: "reportes/vacunas", component: ReportesVacunas },
-      { path: "reportes/campañas", component: ReportesCampanias },
+      { path: "reportes/campanias", component: ReportesCampanias },
+
+      // --- Bloque original de vacunas ---
+      {
+        path: "",
+        name: "menu-vacunas",
+        component: () => import("@/views/admin/vacunas/MenuVacunas.vue"),
+      },
+      {
+        path: "registrar",
+        name: "registrar-vacuna",
+        component: () => import("@/views/admin/vacunas/RegistrarVacuna.vue"),
+      },
+      {
+        path: "ver",
+        name: "ver-vacunas",
+        component: () => import("@/views/admin/vacunas/VerVacunas.vue"),
+      },
+      {
+        path: "detalle/:id",
+        name: "detalle-vacuna",
+        component: () => import("@/views/admin/vacunas/DetalleVacuna.vue"),
+      },
+
+      // --- 🔹 NUEVO BLOQUE DEL MÓDULO DE BIOLÓGICOS ---
+      {
+        path: "biologicos",
+        component: () => import("@/views/admin/biologicos/MenuBiologico.vue"),
+        children: [
+          {
+            path: "",
+            name: "VerBiologicos",
+            component: () => import("@/views/admin/biologicos/VerBiologicos.vue"),
+          },
+          {
+            path: "registrar",
+            name: "RegistrarBiologico",
+            component: () => import("@/views/admin/biologicos/RegistrarBiologico.vue"),
+          },
+          {
+            path: ":id",
+            name: "DetalleBiologico",
+            component: () => import("@/views/admin/biologicos/DetalleBiologico.vue"),
+          },
+        ],
+      },
+      // --- Fin del bloque de Biológicos ---
     ],
   },
 
@@ -55,7 +100,7 @@ const routes = [
     path: "/enfermera",
     name: "enfermera",
     component: EnfermeraDashboard,
-    meta: { requiresAuth: true, roles: ["enfermera"] },
+    meta: { requiresAuth: true, roles: ["Enfermera"] },
   },
 
   // 🔹 DOCTOR
@@ -63,7 +108,7 @@ const routes = [
     path: "/doctor",
     name: "doctor",
     component: DoctorDashboard,
-    meta: { requiresAuth: true, roles: ["doctor"] },
+    meta: { requiresAuth: true, roles: ["Doctor"] },
   },
 
   // 🔹 TUTOR
@@ -81,13 +126,14 @@ const routes = [
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
+// ===========================================================
+// 🔐 Protección global + herencia de meta del padre
+// ===========================================================
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-// ===========================================================
-// 🔐 Protección global + herencia de meta del padre (versión estable)
-// ===========================================================
+
 router.beforeEach((to, from, next) => {
   // 🧩 1. Heredar metadatos del padre si existen
   if (to.matched.length > 1) {

@@ -1,17 +1,29 @@
+from types import SimpleNamespace
+from django.db import connection
+from django.contrib.auth.hashers import check_password
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.permissions import AllowAny
-from django.contrib.auth.hashers import check_password
-from django.db import connection
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.exceptions import AuthenticationFailed
+from django.utils.translation import gettext_lazy as _
+
+from rest_framework_simplejwt.tokens import RefreshToken, TokenError
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.views import TokenViewBase
+from rest_framework_simplejwt.serializers import TokenRefreshSerializer
+
+from backend.auth_app.custom_auth import CustomJWTAuthentication
 
 from .serializers import RegisterSerializer, LoginSerializer, RolSerializer
 from .models import Rol
 
+# ============================================================
+# 🧩 CUSTOM JWT AUTHENTICATION (usado globalmente)
+# ============================================================
 
 # ============================================================
-# 🟢 Vista pública: Registro
+# 🟢 REGISTRO DE USUARIOS
 # ============================================================
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -25,7 +37,7 @@ class RegisterView(APIView):
 
 
 # ============================================================
-# 🟢 Vista pública: Listado de Roles
+# 🟢 LISTADO DE ROLES (público)
 # ============================================================
 class RolesView(APIView):
     permission_classes = [AllowAny]
@@ -37,11 +49,11 @@ class RolesView(APIView):
 
 
 # ============================================================
-# 🟢 Vista pública: Login con JWT sin modelo User
+# 🟢 LOGIN SIN MODELO USER (usa JWT + claims personalizados)
 # ============================================================
 class LoginView(APIView):
     permission_classes = [AllowAny]
-    authentication_classes = []  # ❌ Desactiva autenticación JWT en el login
+    authentication_classes = []  # ❌ no usar JWT en login
 
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
@@ -51,7 +63,7 @@ class LoginView(APIView):
         user_input = serializer.validated_data["user"]
         password = serializer.validated_data["password"]
 
-        # 🔹 Buscar usuario por username, correo o CURP
+        # 🔍 Buscar usuario en tu estructura personalizada
         with connection.cursor() as cursor:
             cursor.execute(
                 """
@@ -74,7 +86,6 @@ class LoginView(APIView):
 
         db_password, username, curp, nom, app, apm, correo, rol = row
 
-        # 🔹 Validar contraseña con hash de Django
         if not check_password(password, db_password):
             return Response(
                 {"error": "Contraseña incorrecta"},
@@ -82,29 +93,32 @@ class LoginView(APIView):
             )
 
         # ============================================================
-        # ✅ Generar tokens JWT sin usar modelo User
+        # ✅ Generar tokens JWT personalizados
         # ============================================================
-        refresh = RefreshToken()  # crea token sin asociar a un modelo User
-        access_token = refresh.access_token
+        fake_user_id = abs(hash(curp)) % (10**6)
 
-        # Datos personalizados (claims)
-        claims = {
-            "curp": curp,
+        refresh = RefreshToken.for_user(SimpleNamespace(id=fake_user_id))
+        access = refresh.access_token
+
+        # Claims personalizados
+        extra_claims = {
+            "user_id": fake_user_id,
             "username": username,
+            "curp": curp,
             "rol": rol,
         }
 
-        for key, value in claims.items():
-            refresh[key] = value
-            access_token[key] = value
+        for k, v in extra_claims.items():
+            refresh[k] = v
+            access[k] = v
 
         # ============================================================
-        # 🔹 Respuesta final
+        # 🟢 Respuesta exitosa
         # ============================================================
         return Response(
             {
                 "message": "Inicio de sesión exitoso",
-                "access": str(access_token),
+                "access": str(access),
                 "refresh": str(refresh),
                 "username": username,
                 "nombre": f"{nom} {app or ''} {apm or ''}".strip(),
@@ -114,16 +128,69 @@ class LoginView(APIView):
             },
             status=status.HTTP_200_OK,
         )
-from rest_framework.permissions import IsAuthenticated
-from rest_framework_simplejwt.authentication import JWTAuthentication
 
+
+# ============================================================
+# 🟢 VISTA /ME (usuario autenticado)
+# ============================================================
 class MeView(APIView):
-    authentication_classes = [JWTAuthentication]
+    authentication_classes = [CustomJWTAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        user = request.user
         user_data = {
-            "curp": request.user.curp if hasattr(request.user, "curp") else None,
-            "username": request.user.username if hasattr(request.user, "username") else None,
+            "curp": getattr(user, "curp", None),
+            "username": getattr(user, "username", None),
+            "rol": getattr(user, "rol", None),
+            "is_authenticated": getattr(user, "is_authenticated", False),
         }
         return Response(user_data, status=status.HTTP_200_OK)
+
+
+# ============================================================
+# 🟢 CUSTOM TOKEN REFRESH (no depende de auth_user)
+# ============================================================
+class CustomTokenRefreshSerializer(TokenRefreshSerializer):
+    """
+    Serializer que valida el refresh token sin modelo User.
+    Copia los claims personalizados del token anterior.
+    """
+
+    def validate(self, attrs):
+        refresh = attrs.get("refresh")
+        if not refresh:
+            raise AuthenticationFailed(_("El campo 'refresh' es obligatorio."))
+
+        try:
+            token = RefreshToken(refresh)
+        except TokenError:
+            raise AuthenticationFailed(_("Refresh token inválido o expirado."))
+
+        data = {"access": str(token.access_token)}
+
+        # Copiar claims personalizados al nuevo access
+        for key, value in token.payload.items():
+            if key not in ["token_type", "exp", "jti"]:
+                data[key] = value
+
+        return data
+
+
+class CustomTokenRefreshView(TokenViewBase):
+    """
+    Endpoint para refrescar token sin modelo User real.
+    """
+    serializer_class = CustomTokenRefreshSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        try:
+            serializer.is_valid(raise_exception=True)
+            return Response(serializer.validated_data, status=status.HTTP_200_OK)
+        except Exception as e:
+            print("⚠️ Error al refrescar token:", e)
+            return Response(
+                {"detail": "Refresh token inválido o expirado."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )

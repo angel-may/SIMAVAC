@@ -1,94 +1,92 @@
 // 📁 frontend/src/utils/auth.service.js
-import axios from "axios";
+// Servicio centralizado para login, registro y gestión de tokens JWT
 
-const API_URL = "http://127.0.0.1:8000/api/auth/";
+import api from "@/utils/api"  // ✅ Usa el mismo interceptor que biologicos.service.js
+import axios from "axios"
 
-// ✅ Configuración base de Axios (para incluir tokens automáticamente)
-const api = axios.create({
-  baseURL: API_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
-// Interceptor: agrega token JWT si existe
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("access");
-  if (token) config.headers.Authorization = `Bearer ${token}`;
-  return config;
-});
+const BASE_URL = "http://127.0.0.1:8000/api/auth/"
 
 export const AuthService = {
+  // =====================================================
   // 🔹 Iniciar sesión
+  // =====================================================
   async login(user, password) {
     try {
-      const res = await api.post("login/", { user, password });
-      const data = res.data;
+      const res = await axios.post(`${BASE_URL}login/`, { user, password })
+      const data = res.data
 
-      // 🧠 Compatibilidad doble:
-      // Si el backend devuelve JWT (access / refresh), guardarlos
-      if (data.access) {
-        localStorage.setItem("access", data.access);
-      }
-      if (data.refresh) {
-        localStorage.setItem("refresh", data.refresh);
-      }
+      // ✅ Guarda tokens localmente
+      if (data.access) localStorage.setItem("access", data.access)
+      if (data.refresh) localStorage.setItem("refresh", data.refresh)
+      if (data.username) localStorage.setItem("user", JSON.stringify(data))
 
-      return data;
+      console.log("🔐 Sesión iniciada correctamente:", data.username)
+      return data
     } catch (err) {
-      console.error("Error en login:", err);
-      if (err.response && err.response.data) {
-        throw new Error(err.response.data.error || "Error al iniciar sesión");
-      }
-      throw new Error("No se pudo conectar con el servidor");
+      console.error("❌ Error en login:", err.response?.data || err.message)
+      throw new Error(err.response?.data?.error || "Error al iniciar sesión")
     }
   },
 
-  // 🔹 Registrar usuario
+  // =====================================================
+  // 🔹 Registrar usuario (no requiere token)
+  // =====================================================
   async register(data) {
     try {
-      const res = await api.post("register/", data);
-      return res.data;
+      const res = await axios.post(`${BASE_URL}register/`, data)
+      console.log("✅ Usuario registrado correctamente")
+      return res.data
     } catch (err) {
-      console.error("Error en registro:", err);
+      console.error("❌ Error en registro:", err.response?.data || err.message)
       throw new Error(
         err.response?.data?.error || "No se pudo registrar el usuario"
-      );
+      )
     }
   },
 
-  // 🔹 Obtener roles (para selects)
+  // =====================================================
+  // 🔹 Obtener roles (público)
+  // =====================================================
   async getRoles() {
     try {
-      const res = await api.get("roles/");
-      return res.data;
+      const res = await axios.get(`${BASE_URL}roles/`)
+      return res.data
     } catch (err) {
-      throw new Error("No se pudieron obtener los roles");
+      console.error("❌ No se pudieron obtener los roles:", err.response?.data || err.message)
+      throw new Error("No se pudieron obtener los roles")
     }
   },
 
-  // 🔹 Refrescar token (si se usa SimpleJWT)
+  // =====================================================
+  // 🔹 Refrescar token (usando el endpoint correcto)
+  // =====================================================
   async refreshToken() {
-    const refresh = localStorage.getItem("refresh");
-    if (!refresh) return null;
+    const refresh = localStorage.getItem("refresh")
+    if (!refresh) return null
 
     try {
-      const res = await axios.post(`${API_URL}token/refresh/`, { refresh });
-      const newAccess = res.data.access;
-      localStorage.setItem("access", newAccess);
-      return newAccess;
+      // ✅ Usa el endpoint correcto según el backend
+      const res = await axios.post(`${BASE_URL}token/refresh/`, { refresh })
+      const newAccess = res.data.access
+      localStorage.setItem("access", newAccess)
+      console.log("♻️ Token refrescado correctamente")
+      return newAccess
     } catch (err) {
-      console.warn("Token expirado o inválido");
-      localStorage.removeItem("access");
-      localStorage.removeItem("refresh");
-      return null;
+      console.warn("⚠️ Token expirado o inválido. Cerrando sesión.")
+      localStorage.removeItem("access")
+      localStorage.removeItem("refresh")
+      localStorage.removeItem("user")
+      return null
     }
   },
 
-  // 🔹 Cerrar sesión (limpieza de tokens)
+  // =====================================================
+  // 🔹 Cerrar sesión (limpieza total)
+  // =====================================================
   logout() {
-    localStorage.removeItem("access");
-    localStorage.removeItem("refresh");
-    localStorage.removeItem("user");
+    localStorage.removeItem("access")
+    localStorage.removeItem("refresh")
+    localStorage.removeItem("user")
+    console.log("🚪 Sesión cerrada")
   },
-};
+}

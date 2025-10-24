@@ -39,53 +39,56 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import { useToast } from "vue-toastification";
-import { AuthService } from "@/utils/auth.service";
+import { ref } from "vue"
+import { useRouter } from "vue-router"
+import { useToast } from "vue-toastification"
+import { AuthService } from "@/utils/auth.service"
+import { useUserStore } from "@/stores/user"
 
-const user = ref("");
-const password = ref("");
-const loading = ref(false);
-const toast = useToast();
-const router = useRouter();
+const user = ref("")
+const password = ref("")
+const loading = ref(false)
+const toast = useToast()
+const router = useRouter()
+const store = useUserStore()
 
 const login = async () => {
-  loading.value = true;
+  loading.value = true
 
   try {
-    console.log("🧩 Enviando login con:", user.value, password.value);
+    console.log("🧩 Enviando login con:", user.value, password.value)
 
-    const data = await AuthService.login(user.value, password.value);
-    console.log("✅ Login exitoso, datos recibidos:", data);
+    // 🔹 Llamada al backend
+    const data = await AuthService.login(user.value, password.value)
+    console.log("✅ Login exitoso, datos recibidos:", data)
 
-    // ✅ Toast de bienvenida
+    // 🔹 Guardar sesión (Pinia + localStorage)
+    store.setSession(data)
+
+    // 🔹 Mostrar bienvenida
     toast.success(`Bienvenido ${data.nombre} (${data.rol})`, {
       timeout: 2500,
       position: "top-right",
-    });
+    })
 
-    // Guardar sesión local
-    localStorage.setItem("user", JSON.stringify(data));
+    // 🔹 Redirección según el rol
+    const rol = data.rol.toLowerCase().trim()
+    let destino = "/"
 
-    // ✅ Redirección por rol (usa await para asegurar la navegación)
-    const rol = data.rol.toLowerCase().trim();
-    let destino = "/";
+    if (rol === "administrador") destino = "/admin"
+    else if (rol === "doctor") destino = "/doctor"
+    else if (rol === "enfermera") destino = "/enfermera"
+    else if (rol === "tutor") destino = "/tutor"
 
-    if (rol === "administrador") destino = "/admin";
-    else if (rol === "doctor") destino = "/doctor";
-    else if (rol === "enfermera") destino = "/enfermera";
-    else if (rol === "tutor") destino = "/tutor";
-
-    console.log("➡️ Redirigiendo a:", destino);
-    await router.push(destino);
+    console.log("➡️ Redirigiendo a:", destino)
+    await router.push(destino)
   } catch (error) {
-    console.error("❌ Error en login:", error);
-    toast.error(error.message || "Credenciales incorrectas");
+    console.error("❌ Error en login:", error)
+    toast.error(error.message || "Credenciales incorrectas")
   } finally {
-    loading.value = false;
+    loading.value = false
   }
-};
+}
 </script>
 
 <style scoped>
